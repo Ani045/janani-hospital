@@ -96,7 +96,7 @@ const DepartmentsSection = () => {
             <div
               ref={scrollContainerRef}
               className="flex overflow-x-auto scrollbar-hide space-x-2 mx-3 py-2"
-              style={{ scrollbarWidth: 'none', '-ms-overflow-style': 'none' }}
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
               {departments.map((department) => (
                 <button
