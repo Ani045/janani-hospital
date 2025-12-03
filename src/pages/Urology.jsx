@@ -62,7 +62,7 @@ const Urology = () => {
     };
 
     return (
-        <div className="pt-16 bg-gray-50">
+        <div className=" bg-gray-50">
             <section className="relative min-h-[400px] h-[50vh] sm:h-[55vh] md:h-[60vh]">
                 <div
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat"

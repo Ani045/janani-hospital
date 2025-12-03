@@ -5,8 +5,8 @@ const { FiTarget, FiEye, FiHeart, FiUsers, FiAward } = FiIcons;
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-12 bg-white">
-      <div className="container mx-auto px-4">
+    <section id="about" className="py-16 lg:py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">

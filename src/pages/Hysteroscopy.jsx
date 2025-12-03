@@ -62,7 +62,7 @@ faq: [
 };
 
 return (
-<div className="pt-16 bg-gray-50">
+<div className=" bg-gray-50">
 <section className="relative h-[60vh] min-h-[450px] bg-slate-900">
 <div 
 className="absolute inset-0 bg-cover bg-center" 

@@ -58,7 +58,7 @@ import React,{useState} from 'react';
 
  if (!departmentData) {
  return (
- <div className="pt-16 min-h-screen flex items-center justify-center bg-gray-50">
+ <div className="pt-20 sm:pt-24 lg:pt-28 min-h-screen flex items-center justify-center bg-gray-50">
  <div className="text-center">
  <SafeIcon icon={FiAlertTriangle} className="text-6xl text-red-500 mx-auto mb-4" />
  <h1 className="text-3xl font-bold text-gray-800">Department Not Found</h1>
@@ -72,8 +72,8 @@ import React,{useState} from 'react';
  }
 
  return (
- <div className="pt-16 bg-gray-50">
- <section className="relative h-[60vh] min-h-[450px] bg-slate-900">
+ <div className="bg-gray-50">
+ <section className="relative h-[60vh] min-h-[450px] bg-slate-900 pt-16 sm:pt-20 lg:pt-24">
  <div className="absolute inset-0 bg-cover bg-center" style={{backgroundImage: `url(${departmentData.hero})`}} />
  <div className="absolute inset-0 bg-gradient-to-r from-teal-900/90 to-red-900/40 mix-blend-multiply" />
  <div className="absolute inset-0 flex items-center">

@@ -85,10 +85,12 @@ const Hero = () => {
 
 
   return (
-    <div className="relative bg-gradient-to-r from-teal-500 to-cyan-600 overflow-hidden">
+    <div className="relative bg-gradient-to-r from-teal-800 via-teal-700 to-emerald-700 overflow-hidden">
+      {/* Black Overlay */}
+      <div className="absolute inset-0 bg-black/40"></div>
 
       {/* WhatsApp Button */}
-      <div className="fixed right-6 bottom-6 z-50">
+      {/* <div className="fixed right-6 bottom-6 z-50">
         <a 
           href="https://wa.me/914040123456" 
           target="_blank" 
@@ -97,9 +99,9 @@ const Hero = () => {
         >
           <SafeIcon icon={FiMessageCircle} className="w-6 h-6" />
         </a>
-      </div>
+      </div> */}
 
-      <div className="container mx-auto px-4 py-12 lg:py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-14 sm:pt-24 lg:pt-28 lg:pb-28 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Left Content */}
           <div className="text-white space-y-8">
@@ -107,7 +109,7 @@ const Hero = () => {
               <p className="text-lg font-medium opacity-90">Our Medical Experts are here for you.</p>
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
                 Get quality medical care
-                <br />
+               
                 and treatment with us.
               </h1>
               <p className="text-lg lg:text-xl opacity-90">
@@ -161,18 +163,18 @@ const Hero = () => {
 
           {/* Right Image - Medical Facilities */}
           <div className="relative hidden lg:flex justify-center items-center">
-            <div className="relative w-full h-96">
+            <div className="relative w-full h-96 rounded-2xl">
               <img 
                 src="/homepage/Advanced Medical Facilities-Banner-image.png" 
                 alt="Advanced Medical Facilities"
-                className="w-full h-full object-contain"
+                className="w-full h-80 lg:h-96 rounded-2xl"
               />
             </div>
           </div>
         </div>
 
         {/* Service Cards */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-12 lg:mt-16">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mt-12 lg:mt-16">
           {services.map((service, index) => (
             <Link
               key={index}

@@ -11,8 +11,9 @@ const Home = () => {
  return (
  <>
  <Hero />
+  <DepartmentsSection />
   <AboutSection />
- <DepartmentsSection />
+
  <DoctorsSection />
  <TestimonialsSection />
 

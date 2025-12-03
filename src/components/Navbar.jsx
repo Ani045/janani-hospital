@@ -59,116 +59,128 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-[100] transition-all duration-300 ${isScrolled ? 'bg-white shadow-lg py-2' : 'bg-white shadow-md py-3'
-        }`}
+      className={`fixed top-0 left-0 w-full z-[150] transition-all duration-500 ease-out ${
+        isScrolled 
+          ? 'bg-white/95 backdrop-blur-xl shadow-xl py-2 sm:py-3 border-b border-gray-200' 
+          : 'py-3 sm:py-4 bg-transparent'
+      }`}
     >
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-12 sm:h-14 lg:h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-2 group">
             <img
-              src="https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1759402892809-logo.jpg"
+              src="logo.png"
               alt="Janani Hospital"
-              className="h-10 w-auto"
+              className={`h-12 sm:h-16 lg:h-20 w-auto transition-all duration-300 opacity-90 group-hover:opacity-100 ${isScrolled ? 'mix-blend-multiply' : 'mix-blend-normal'}`}
             />
-            <span className="text-lg font-bold text-teal-700 hidden sm:block">
-              Janani Hospital
+            <span className={`text-xl font-bold hidden lg:block transition-all duration-300 ${
+              isScrolled 
+                ? 'text-gray-900' 
+                : 'bg-gradient-to-r from-white via-white/90 to-white/80 bg-clip-text text-transparent drop-shadow-lg'
+            } ${isScrolled ? 'text-lg' : 'text-xl'}`}>
+             
             </span>
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center space-x-6">
+          <div className="hidden xl:flex items-center space-x-8">
             <Link
               to="/"
-              className={`font-medium transition-colors hover:text-teal-600 text-sm ${location.pathname === '/' ? 'text-teal-600' : 'text-gray-700'
-                }`}
+              className={`relative font-semibold text-sm px-3 py-2 transition-all duration-300 group ${
+                location.pathname === '/' 
+                  ? (isScrolled ? 'text-emerald-600' : 'text-white drop-shadow-lg') 
+                  : (isScrolled ? 'text-gray-700 hover:text-emerald-600' : 'text-white/90 hover:text-white drop-shadow-lg')
+              } ${isScrolled ? 'after:bg-emerald-600' : 'after:bg-white/80'}`}
             >
               Home
+              {location.pathname === '/' && (
+                <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 rounded-full transition-all duration-300 group-hover:w-full ${
+                  isScrolled ? 'bg-emerald-600' : 'bg-white/80'
+                }`} 
+                />
+              )}
             </Link>
             <Link
               to="/about"
-              className={`font-medium transition-colors hover:text-teal-600 text-sm ${location.pathname === '/about' ? 'text-teal-600' : 'text-gray-700'
-                }`}
+              className={`relative font-semibold text-sm px-3 py-2 transition-all duration-300 group ${
+                location.pathname === '/about' 
+                  ? (isScrolled ? 'text-emerald-600' : 'text-white drop-shadow-lg') 
+                  : (isScrolled ? 'text-gray-700 hover:text-emerald-600' : 'text-white/90 hover:text-white drop-shadow-lg')
+              } ${isScrolled ? 'after:bg-emerald-600' : 'after:bg-white/80'}`}
             >
               About
+              {location.pathname === '/about' && (
+                <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 rounded-full transition-all duration-300 group-hover:w-full ${
+                  isScrolled ? 'bg-emerald-600' : 'bg-white/80'
+                }`} 
+                />
+              )}
             </Link>
 
-            {/* Departments Mega Menu */}
+            {/* Compact Departments Mega Menu */}
             <div
               className="relative"
               onMouseEnter={() => handleMouseEnter('departments')}
               onMouseLeave={handleMouseLeave}
             >
-              <button className="flex items-center space-x-1 font-medium text-gray-700 hover:text-teal-600 transition-colors text-sm">
+              <button className={`flex items-center space-x-2 font-semibold text-sm px-3 py-2 transition-all duration-300 group relative ${
+                activeDropdown === 'departments' 
+                  ? (isScrolled ? 'text-emerald-600 font-bold' : 'text-white drop-shadow-lg font-bold') 
+                  : (isScrolled ? 'text-gray-700 hover:text-emerald-600' : 'text-white/90 hover:text-white drop-shadow-lg')
+              }`}>
                 <span>Departments</span>
                 <SafeIcon
                   icon={FiChevronDown}
-                  className={`text-xs transition-transform duration-200 ${activeDropdown === 'departments' ? 'rotate-180' : ''
-                    }`}
+                  className={`text-xs transition-transform duration-300 ${activeDropdown === 'departments' ? 'rotate-180' : ''}`}
                 />
               </button>
 
               {activeDropdown === 'departments' && (
-                <div
-                  className="absolute left-1/2 -translate-x-1/2 top-full mt-3 w-[900px] max-w-[95vw] bg-white rounded-2xl shadow-2xl border border-gray-100 py-5 z-[120]"
-                  onMouseEnter={() => handleMouseEnter('departments')}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  {/* Header */}
+                <div className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[700px] max-w-[90vw] bg-white/95 backdrop-blur-2xl rounded-2xl shadow-2xl border border-white/30 py-4 z-[200]">
+                  {/* Compact Header */}
                   <div className="px-6 pb-4 border-b border-gray-100 flex items-center justify-between">
                     <div>
-                      <h4 className="font-bold text-gray-900 text-base">Our Medical Departments</h4>
-                      <p className="text-xs text-gray-500 mt-0.5">Explore all specialties in one place</p>
+                      <h4 className="font-bold text-xl text-gray-900">Medical Departments</h4>
+                      <p className="text-xs text-gray-500 mt-1">All specialties in one place</p>
                     </div>
                     <Link
                       to="/appointment"
-                      className="hidden md:inline-flex items-center space-x-2 bg-teal-600 text-white text-xs font-medium px-3 py-2 rounded-lg hover:bg-teal-700 transition-colors"
+                      className="flex items-center space-x-2 bg-emerald-600 text-white text-xs font-semibold px-4 py-2 rounded-xl hover:bg-emerald-700 transition-all duration-200"
                       onClick={() => setActiveDropdown(null)}
                     >
                       <SafeIcon icon={FiCalendar} className="text-xs" />
-                      <span>Book Appointment</span>
+                      <span>Book Now</span>
                     </Link>
                   </div>
 
-                  {/* 3-Column Grid */}
-                  <div className="grid grid-cols-3 gap-3 px-6 py-4">
+                  {/* Compact 3-Column Grid */}
+                  <div className="grid grid-cols-3 gap-4 px-6 py-4">
                     {departments.map((dept) => (
                       <Link
                         key={dept.name}
                         to={dept.path}
-                        className="flex items-start space-x-3 px-3 py-3 rounded-lg hover:bg-teal-50 transition-all group"
+                        className="flex items-start space-x-3 p-3 rounded-xl hover:bg-emerald-50 transition-all duration-200 group hover:shadow-md border border-transparent hover:border-emerald-200"
                         onClick={() => setActiveDropdown(null)}
                       >
-                        <div className="mt-0.5 w-9 h-9 bg-teal-50 rounded-lg flex items-center justify-center group-hover:bg-teal-100 transition-colors flex-shrink-0">
-                          <SafeIcon icon={dept.icon} className="text-teal-600 text-base" />
+                        <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center group-hover:bg-emerald-200 flex-shrink-0 mt-0.5">
+                          <SafeIcon icon={dept.icon} className="text-emerald-600 text-sm" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <div className="flex items-center space-x-2 mb-0.5">
-                            <span className="text-gray-900 font-medium text-sm group-hover:text-teal-700 truncate">
+                          <div className="flex items-center space-x-2 mb-1">
+                            <span className="text-gray-900 font-medium text-xs group-hover:text-emerald-700 truncate">
                               {dept.name}
                             </span>
                             {dept.priority === 'high' && (
-                              <span className="w-1.5 h-1.5 bg-teal-600 rounded-full flex-shrink-0" />
+                              <span className="w-1.5 h-1.5 bg-emerald-600 rounded-full flex-shrink-0" />
                             )}
                           </div>
-                          <p className="text-xs text-gray-500 leading-tight group-hover:text-teal-600">
+                          <p className="text-xs text-gray-500 leading-tight group-hover:text-emerald-600">
                             {dept.description}
                           </p>
                         </div>
                       </Link>
                     ))}
-                  </div>
-
-                  {/* Footer CTA for Mobile */}
-                  <div className="px-6 pt-3 border-t border-gray-100 bg-gray-50 rounded-b-2xl md:hidden">
-                    <Link
-                      to="/appointment"
-                      className="w-full bg-teal-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-teal-700 transition-colors flex items-center justify-center space-x-2 text-sm"
-                      onClick={() => setActiveDropdown(null)}
-                    >
-                      <SafeIcon icon={FiCalendar} className="text-sm" />
-                      <span>Book Appointment</span>
-                    </Link>
                   </div>
                 </div>
               )}
@@ -176,20 +188,27 @@ const Navbar = () => {
 
             <Link
               to="/contact"
-              className={`font-medium transition-colors hover:text-teal-600 text-sm ${location.pathname === '/contact' ? 'text-teal-600' : 'text-gray-700'
-                }`}
+              className={`relative font-semibold text-sm px-3 py-2 transition-all duration-300 group ${
+                location.pathname === '/contact' 
+                  ? (isScrolled ? 'text-emerald-600' : 'text-white drop-shadow-lg') 
+                  : (isScrolled ? 'text-gray-700 hover:text-emerald-600' : 'text-white/90 hover:text-white drop-shadow-lg')
+              }`}
             >
               Contact
             </Link>
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:block">
+          <div className="hidden xl:block">
             <Link
               to="/appointment"
-              className="bg-teal-600 text-white px-5 py-2 rounded-lg font-medium hover:bg-teal-700 transition-colors duration-300 flex items-center space-x-2 text-sm"
+              className={`group px-6 py-2.5 rounded-xl font-semibold text-sm flex items-center space-x-2 transition-all duration-300 shadow-lg ${
+                isScrolled 
+                  ? 'bg-emerald-600 text-white hover:bg-emerald-700 hover:shadow-xl hover:-translate-y-0.5' 
+                  : 'bg-white/90 text-emerald-600 backdrop-blur hover:bg-white hover:shadow-xl hover:-translate-y-0.5 drop-shadow-lg'
+              }`}
             >
-              <SafeIcon icon={FiCalendar} className="text-sm" />
+              <SafeIcon icon={FiCalendar} className="text-sm group-hover:rotate-12 transition-transform duration-300" />
               <span>Book Appointment</span>
             </Link>
           </div>
@@ -197,61 +216,81 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            className="xl:hidden p-2 rounded-xl hover:bg-white/50 backdrop-blur-sm transition-all duration-300 hover:scale-110"
           >
-            <SafeIcon icon={isMobileMenuOpen ? FiX : FiMenu} className="text-lg text-gray-700" />
+            <SafeIcon 
+              icon={isMobileMenuOpen ? FiX : FiMenu} 
+              className={`text-xl transition-all duration-300 ${isScrolled ? 'text-gray-900' : 'text-white drop-shadow-lg'}`} 
+            />
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-gray-200">
-            <div className="flex flex-col space-y-3 pt-4">
+          <div className="xl:hidden absolute top-full left-0 right-0 mt-3 mx-3 mb-6 pb-6 pt-4 rounded-xl shadow-lg animate-in slide-in-from-top-4 duration-200 bg-white border border-gray-300 z-[200] max-h-[calc(100vh-140px)] overflow-y-auto">
+            <div className="flex flex-col space-y-2 px-4">
               <Link
                 to="/"
-                className={`font-medium transition-colors text-sm ${location.pathname === '/' ? 'text-teal-600' : 'text-gray-700 hover:text-teal-600'
-                  }`}
+                className={`font-semibold text-sm py-2.5 px-3 rounded-lg transition-all duration-300 flex items-center space-x-3 ${
+                  location.pathname === '/' 
+                    ? 'text-emerald-600 bg-emerald-50' 
+                    : 'text-gray-800 hover:text-emerald-600 hover:bg-gray-50'
+                }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Home
+                <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 bg-emerald-100">
+                  <SafeIcon icon={FiHeart} className="text-emerald-600 text-sm" />
+                </div>
+                <span>Home</span>
               </Link>
               <Link
                 to="/about"
-                className={`font-medium transition-colors text-sm ${location.pathname === '/about'
-                  ? 'text-teal-600'
-                  : 'text-gray-700 hover:text-teal-600'
-                  }`}
+                className={`font-semibold text-sm py-2.5 px-3 rounded-lg transition-all duration-300 flex items-center space-x-3 ${
+                  location.pathname === '/about'
+                    ? 'text-emerald-600 bg-emerald-50' 
+                    : 'text-gray-800 hover:text-emerald-600 hover:bg-gray-50'
+                }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                About
+                <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 bg-teal-100">
+                  <SafeIcon icon={FiUsers} className="text-teal-600 text-sm" />
+                </div>
+                <span>About</span>
               </Link>
 
               {/* Mobile Departments Accordion */}
               <div>
                 <button
                   onClick={() => setIsMobileDepartmentsOpen(!isMobileDepartmentsOpen)}
-                  className="w-full flex items-center justify-between font-medium text-sm text-gray-700 hover:text-teal-600"
+                  className="w-full flex items-center justify-between font-semibold text-sm py-2.5 px-3 rounded-lg transition-all duration-300 text-gray-800 hover:text-emerald-600 hover:bg-gray-50"
                 >
-                  <span>Departments</span>
+                  <span className="flex items-center space-x-3">
+                    <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 bg-emerald-100">
+                      <SafeIcon icon={FiMonitor} className="text-emerald-600 text-sm" />
+                    </div>
+                    <span>Departments</span>
+                  </span>
                   <SafeIcon
                     icon={FiChevronDown}
-                    className={`transition-transform duration-300 ${isMobileDepartmentsOpen ? 'rotate-180' : ''
-                      }`}
+                    className={`transition-transform duration-300 text-emerald-600 text-sm ${isMobileDepartmentsOpen ? 'rotate-180' : ''}`}
                   />
                 </button>
                 {isMobileDepartmentsOpen && (
-                  <div className="pl-4 mt-2 space-y-2 border-l-2 border-teal-200 max-h-[400px] overflow-y-auto pr-2 scroll-smooth">
+                  <div className="pl-6 mt-2 space-y-1 max-h-[300px] overflow-y-auto pr-2 pb-2">
                     {departments.map((dept) => (
                       <Link
                         key={dept.name}
                         to={dept.path}
-                        className="flex items-center space-x-3 text-gray-700 hover:text-teal-600 transition-colors py-2 text-sm"
-                        onClick={() => setIsMobileMenuOpen(false)}
+                        className="flex items-center space-x-2 py-2 px-2 rounded-lg transition-all duration-200 group text-xs font-medium text-gray-700 hover:text-emerald-600 hover:bg-emerald-50"
+                        onClick={() => {
+                          setIsMobileMenuOpen(false);
+                          setIsMobileDepartmentsOpen(false);
+                        }}
                       >
-                        <SafeIcon icon={dept.icon} className="text-teal-600 text-sm" />
-                        <span>{dept.name}</span>
+                        <SafeIcon icon={dept.icon} className="text-emerald-600 text-sm flex-shrink-0 group-hover:scale-110 transition-transform" />
+                        <span className="flex-1 min-w-0">{dept.name}</span>
                         {dept.priority === 'high' && (
-                          <span className="w-1.5 h-1.5 bg-teal-600 rounded-full" />
+                          <span className="w-1.5 h-1.5 bg-emerald-600 rounded-full flex-shrink-0" />
                         )}
                       </Link>
                     ))}
@@ -261,26 +300,31 @@ const Navbar = () => {
 
               <Link
                 to="/contact"
-                className={`font-medium transition-colors text-sm ${location.pathname === '/contact'
-                  ? 'text-teal-600'
-                  : 'text-gray-700 hover:text-teal-600'
-                  }`}
+                className={`font-semibold text-sm py-2.5 px-3 rounded-lg transition-all duration-300 flex items-center space-x-3 ${
+                  location.pathname === '/contact'
+                    ? 'text-emerald-600 bg-emerald-50' 
+                    : 'text-gray-800 hover:text-emerald-600 hover:bg-gray-50'
+                }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Contact
+                <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 bg-purple-100">
+                  <SafeIcon icon={FiActivity} className="text-purple-600 text-sm" />
+                </div>
+                <span>Contact</span>
               </Link>
               <Link
                 to="/appointment"
-                className="bg-teal-600 text-white px-5 py-2 rounded-lg font-medium text-center text-sm"
+                className="px-4 py-3 rounded-xl font-semibold text-sm shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2 mt-4 bg-emerald-600 text-white hover:bg-emerald-700"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Book Appointment
+                <SafeIcon icon={FiCalendar} className="text-sm" />
+                <span>Book Appointment</span>
               </Link>
             </div>
           </div>
         )}
       </div>
-    </nav >
+    </nav>
   );
 };
 
