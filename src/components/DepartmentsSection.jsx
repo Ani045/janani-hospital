@@ -87,11 +87,11 @@ const DepartmentsSection = () => {
     <section id="departments" className="py-14 lg:py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-8">
+        <div className="text-left mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
             Our Medical <span className="text-teal-600">Departments</span>
           </h2>
-          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl">
             Comprehensive healthcare services across multiple specialties with world-class facilities
           </p>
         </div>
@@ -152,13 +152,13 @@ const DepartmentsSection = () => {
           </div>
         </div>
 
-        {/* WIDER Compact Department Card - Fixed Height */}
+        {/* WIDER Compact Department Card - Responsive Height */}
         {currentDepartment && (
           <div key={currentDepartment.id} className="max-w-7xl mx-auto">
-            <div className="bg-white rounded-3xl shadow-xl border border-gray-200/50 overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
-              <div className="flex flex-col lg:flex-row h-[440px]">
-                {/* Image Side ~35% - Wider content gets more space */}
-                <div className="relative lg:w-[35%] w-full h-full">
+            <div className="bg-white rounded-2xl lg:rounded-3xl shadow-xl border border-gray-200/50 overflow-hidden hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
+              <div className="flex flex-col lg:flex-row min-h-[300px] lg:h-[440px]">
+                {/* Image Side ~35% - Responsive */}
+                <div className="relative lg:w-[35%] w-full h-48 lg:h-full">
                   <img
                     src={currentDepartment.image}
                     alt={currentDepartment.name}
@@ -199,109 +199,113 @@ const DepartmentsSection = () => {
                   </div>
                 </div>
 
-                {/* Content Side ~65% - MUCH WIDER */}
-                <div className="lg:w-[65%] w-full p-5 lg:p-7 h-full flex flex-col bg-gradient-to-br from-white via-white/95 to-gray-50/80">
-                  {/* Compact Header */}
-                  <div className="flex items-center justify-between mb-4 pr-2">
-                    <div className="flex items-center space-x-2">
+                {/* Content Side ~65% - Mobile Optimized */}
+                <div className="lg:w-[65%] w-full p-4 lg:p-7 flex flex-col bg-gradient-to-br from-white via-white/95 to-gray-50/80">
+                  {/* Mobile Compact Header */}
+                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-3 lg:mb-4">
+                    <div className="flex items-center space-x-2 mb-2 lg:mb-0">
                       <div className={`w-1.5 h-6 ${currentDepartment.accentColor} rounded-full shadow-md flex-shrink-0`} />
-                      <h2 className="text-xl lg:text-2xl font-bold text-gray-800 leading-tight pr-4">
+                      <h2 className="text-lg lg:text-2xl font-bold text-gray-800 leading-tight">
                         {currentDepartment.name}
                       </h2>
                     </div>
                     <div className="flex items-center space-x-2 text-sm">
                       <div className="flex items-center space-x-1 text-yellow-400">
-                        <SafeIcon icon={FiStar} className="text-lg" />
+                        <SafeIcon icon={FiStar} className="text-base lg:text-lg" />
                         <span className="font-bold">{currentDepartment.rating}</span>
                       </div>
                       <span className="text-gray-500">({currentDepartment.patients})</span>
                     </div>
                   </div>
 
-                  {/* Rich Description - Full Width */}
-                  <p className="text-gray-600 leading-relaxed text-sm lg:text-base mb-5 pr-2 line-clamp-3">
+                  {/* Description - Mobile Optimized */}
+                  <p className="text-gray-600 leading-relaxed text-sm lg:text-base mb-4 lg:mb-5 line-clamp-2 lg:line-clamp-3">
                     {currentDepartment.description}
                   </p>
 
-                  {/* Wide Horizontal Layout - Stats + Services */}
-                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-5 h-20">
+                  {/* Stats - Mobile Optimized */}
+                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-3 mb-4 lg:mb-5">
                     {/* Doctors */}
-                    <div className="group p-3 bg-white/90 backdrop-blur-sm rounded-xl border border-gray-200/50 shadow-sm hover:shadow-lg transition-all h-full flex flex-col justify-center hover:scale-[1.02]">
-                      <div className="text-xl lg:text-2xl font-bold text-gray-800 mb-1">{currentDepartment.doctors}</div>
+                    <div className="group p-2 lg:p-3 bg-white/90 backdrop-blur-sm rounded-lg lg:rounded-xl border border-gray-200/50 shadow-sm hover:shadow-lg transition-all flex flex-col justify-center hover:scale-[1.02] h-16 lg:h-20">
+                      <div className="text-lg lg:text-2xl font-bold text-gray-800 mb-0 lg:mb-1">{currentDepartment.doctors}</div>
                       <div className="text-xs text-gray-600 font-medium uppercase tracking-wide">Doctors</div>
                     </div>
                     
                     {/* Services Count */}
-                    <div className="group p-3 bg-gradient-to-r from-emerald-50 to-emerald-100 rounded-xl border border-emerald-200/50 shadow-sm hover:shadow-lg transition-all h-full flex flex-col justify-center hover:scale-[1.02]">
-                      <div className="text-xl lg:text-2xl font-bold text-emerald-700">{currentDepartment.services.length}</div>
+                    <div className="group p-2 lg:p-3 bg-gradient-to-r from-emerald-50 to-emerald-100 rounded-lg lg:rounded-xl border border-emerald-200/50 shadow-sm hover:shadow-lg transition-all flex flex-col justify-center hover:scale-[1.02] h-16 lg:h-20">
+                      <div className="text-lg lg:text-2xl font-bold text-emerald-700">{currentDepartment.services.length}</div>
                       <div className="text-xs text-emerald-700 font-semibold uppercase tracking-wide">Services</div>
                     </div>
 
                     {/* Emergency Status */}
-                    <div className="group p-3 bg-white/90 backdrop-blur-sm rounded-xl border border-gray-200/50 shadow-sm hover:shadow-lg transition-all h-full flex flex-col justify-center hover:scale-[1.02]">
+                    <div className="group p-2 lg:p-3 bg-white/90 backdrop-blur-sm rounded-lg lg:rounded-xl border border-gray-200/50 shadow-sm hover:shadow-lg transition-all flex flex-col justify-center hover:scale-[1.02] h-16 lg:h-20">
                       <div className={`text-sm font-bold ${currentDepartment.emergencyAvailable ? 'text-red-600' : 'text-gray-500'}`}>
                         {currentDepartment.emergencyAvailable ? '24/7' : 'Scheduled'}
                       </div>
-                      <div className="text-xs text-gray-500 uppercase tracking-wide">Availability</div>
+                      <div className="text-xs text-gray-500 uppercase tracking-wide hidden lg:block">Availability</div>
+                      <div className="text-xs text-gray-500 uppercase tracking-wide lg:hidden">Available</div>
                     </div>
 
                     {/* Priority */}
                     {currentDepartment.priority === 'high' && (
-                      <div className="group p-3 bg-gradient-to-r from-teal-500/10 to-teal-600/10 border border-teal-200/50 rounded-xl shadow-lg hover:shadow-xl transition-all h-full flex flex-col justify-center hover:scale-[1.02]">
-                        <div className="text-sm font-bold text-teal-700 uppercase tracking-wider flex items-center">
+                      <div className="group p-2 lg:p-3 bg-gradient-to-r from-teal-500/10 to-teal-600/10 border border-teal-200/50 rounded-lg lg:rounded-xl shadow-lg hover:shadow-xl transition-all flex flex-col justify-center hover:scale-[1.02] h-16 lg:h-20">
+                        <div className="text-xs lg:text-sm font-bold text-teal-700 uppercase tracking-wider flex items-center">
                           <SafeIcon icon={FiAward} className="text-xs mr-1" />
-                          Featured
+                          <span className="hidden lg:inline">Featured</span>
+                          <span className="lg:hidden">Top</span>
                         </div>
-                        <div className="text-xs text-teal-600 font-semibold">Priority Dept</div>
+                        <div className="text-xs text-teal-600 font-semibold hidden lg:block">Priority Dept</div>
+                        <div className="text-xs text-teal-600 font-semibold lg:hidden">Priority</div>
                       </div>
                     )}
                   </div>
 
-                  {/* Wide Services Horizontal Scroll */}
-                  <div className="flex-1 mb-4 pr-2">
-                    <div className="flex items-center space-x-3 mb-3">
-                      <SafeIcon icon={FiActivity} className={`text-lg ${currentDepartment.iconColor}`} />
-                      <span className="font-bold text-gray-800 text-sm uppercase tracking-wide">Core Services</span>
+                  {/* Services - Mobile Optimized */}
+                  <div className="flex-1 mb-3 lg:mb-4">
+                    <div className="flex items-center space-x-2 lg:space-x-3 mb-2 lg:mb-3">
+                      <SafeIcon icon={FiActivity} className={`text-base lg:text-lg ${currentDepartment.iconColor}`} />
+                      <span className="font-bold text-gray-800 text-xs lg:text-sm uppercase tracking-wide">Core Services</span>
                     </div>
-                    <div className="flex overflow-x-auto scrollbar-hide gap-2 pr-2 h-16 items-center">
-                      {currentDepartment.services.slice(0, 8).map((service, idx) => (
-                        <div key={idx} className="group min-w-0 flex-1 max-w-[140px] p-2.5 bg-white/80 backdrop-blur-sm rounded-lg border border-gray-200/50 shadow-sm hover:shadow-md hover:bg-white hover:border-gray-300/50 transition-all duration-200 hover:scale-[1.05] hover:-translate-y-0.5">
+                    <div className="flex overflow-x-auto scrollbar-hide gap-1.5 lg:gap-2 h-12 lg:h-16 items-center">
+                      {currentDepartment.services.slice(0, 6).map((service, idx) => (
+                        <div key={idx} className="group min-w-0 flex-shrink-0 max-w-[120px] lg:max-w-[140px] p-2 lg:p-2.5 bg-white/80 backdrop-blur-sm rounded-lg border border-gray-200/50 shadow-sm hover:shadow-md hover:bg-white hover:border-gray-300/50 transition-all duration-200 hover:scale-[1.05] hover:-translate-y-0.5">
                           <span className="text-xs font-medium text-gray-700 group-hover:text-gray-900 truncate block leading-tight">{service}</span>
                         </div>
                       ))}
                     </div>
                   </div>
 
-                  {/* Wide Footer - Buttons + Contact */}
-                  <div className="flex items-center justify-between pt-3 border-t border-gray-200/50">
-                    {/* Contact - Compact */}
-                    <div className="flex items-center space-x-4 text-sm">
+                  {/* Footer - Mobile Optimized */}
+                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between pt-3 border-t border-gray-200/50 gap-3 lg:gap-0">
+                    {/* Contact - Mobile Optimized */}
+                    <div className="flex items-center space-x-3 lg:space-x-4 text-sm">
                       <a href="tel:+914040123456" className="flex items-center space-x-1.5 text-gray-700 hover:text-teal-600 font-medium transition-all group">
                         <SafeIcon icon={FiPhone} className="text-sm group-hover:scale-110" />
-                        <span>+91 40 4012 3456</span>
+                        <span className="hidden sm:inline">+91 40 4012 3456</span>
+                        <span className="sm:hidden">Call Now</span>
                       </a>
-                      <div className="w-px h-4 bg-gray-300" />
-                      <span className="flex items-center space-x-1 text-gray-700 font-medium">
+                      <div className="w-px h-4 bg-gray-300 hidden sm:block" />
+                      <span className="items-center space-x-1 text-gray-700 font-medium hidden sm:flex">
                         <SafeIcon icon={FiMapPin} className="text-sm" />
                         <span>Hyderabad</span>
                       </span>
                     </div>
 
-                    {/* Action Buttons - Compact */}
-                    <div className="flex gap-2">
+                    {/* Action Buttons - Mobile Optimized */}
+                    <div className="flex gap-2 w-full lg:w-auto">
                       <Link
                         to={`/department/${currentDepartment.id}`}
-                        className={`bg-gradient-to-r ${currentDepartment.gradientColor} text-white px-5 py-2.5 rounded-xl font-semibold text-sm shadow-lg hover:shadow-xl transition-all duration-200 flex items-center space-x-2 hover:scale-[1.05]`}
+                        className={`bg-gradient-to-r ${currentDepartment.gradientColor} text-white px-4 lg:px-5 py-2 lg:py-2.5 rounded-lg lg:rounded-xl font-semibold text-sm shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center space-x-2 hover:scale-[1.05] flex-1 lg:flex-none`}
                       >
                         <span>Details</span>
                         <SafeIcon icon={FiArrowRight} className="text-sm" />
                       </Link>
                       <Link
                         to="/appointment"
-                        className="border-2 border-gray-300 text-gray-700 px-5 py-2.5 rounded-xl font-semibold text-sm hover:bg-gray-50 hover:border-gray-400 hover:shadow-lg transition-all duration-200 flex items-center space-x-2 hover:scale-[1.05]"
+                        className="border-2 border-gray-300 text-gray-700 px-4 lg:px-5 py-2 lg:py-2.5 rounded-lg lg:rounded-xl font-semibold text-sm hover:bg-gray-50 hover:border-gray-400 hover:shadow-lg transition-all duration-200 flex items-center justify-center space-x-2 hover:scale-[1.05] flex-1 lg:flex-none"
                       >
                         <SafeIcon icon={FiCalendar} className="text-sm" />
-                        <span>Book Now</span>
+                        <span>Book</span>
                       </Link>
                     </div>
                   </div>

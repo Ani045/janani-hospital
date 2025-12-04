@@ -69,8 +69,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-12 sm:h-14 lg:h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
-            <img
-              src="logo.png"
+            <img src="logo.png"
               alt="Janani Hospital"
               className={`h-12 sm:h-16 lg:h-20 w-auto transition-all duration-300 opacity-90 group-hover:opacity-100 ${isScrolled ? 'mix-blend-multiply' : 'mix-blend-normal'}`}
             />
@@ -87,7 +86,7 @@ const Navbar = () => {
           <div className="hidden xl:flex items-center space-x-8">
             <Link
               to="/"
-              className={`relative font-semibold text-sm px-3 py-2 transition-all duration-300 group ${
+              className={`relative font-semibold text-sm px-3 py-8 mb-2 transition-all duration-300 group ${
                 location.pathname === '/' 
                   ? (isScrolled ? 'text-emerald-600' : 'text-white drop-shadow-lg') 
                   : (isScrolled ? 'text-gray-700 hover:text-emerald-600' : 'text-white/90 hover:text-white drop-shadow-lg')

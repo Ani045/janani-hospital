@@ -73,9 +73,9 @@ const DoctorsSection = () => {
   return (
     <section id="doctors" className="py-16 lg:py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10">
+        <div className="text-left mb-10">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Meet Our <span className="text-teal-600">Expert Doctors</span></h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">Highly qualified medical professionals dedicated to providing exceptional healthcare.</p>
+          <p className="text-lg text-gray-600 max-w-2xl">Highly qualified medical professionals dedicated to providing exceptional healthcare.</p>
         </div>
 
         {/* Desktop & Tablet Slider */}

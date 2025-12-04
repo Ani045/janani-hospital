@@ -32,11 +32,11 @@ const ContactSection = () => {
     <section id="contact" className="py-16 lg:py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-10">
+        <div className="text-left mb-10">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             Get In <span className="text-teal-600">Touch</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl">
             Have questions about your health? Our expert team is here to help you 24/7. Reach out to us for any medical assistance.
           </p>
         </div>

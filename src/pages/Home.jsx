@@ -6,6 +6,7 @@ import TestimonialsSection from '../components/TestimonialsSection';
 import AboutSection from '../components/AboutSection';
 import FaqSection from '../components/FaqSection';
 import ContactSection from '../components/ContactSection';
+import JananiHospitalSections from '../components/JananiHospitalSections';
 
 const Home = () => {
  return (
@@ -13,8 +14,8 @@ const Home = () => {
  <Hero />
   <DepartmentsSection />
   <AboutSection />
-
- <DoctorsSection />
+  <JananiHospitalSections />
+ {/* <DoctorsSection /> */}
  <TestimonialsSection />
 
  <FaqSection />

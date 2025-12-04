@@ -29,25 +29,15 @@ const Hero = () => {
   ];
 
   const services = [
-    { icon: FiCheckCircle, title: 'Get Health Checkup', color: 'text-teal-600', link: '/services/health-checkup' },
-    { icon: FiHome, title: 'Homecare', color: 'text-teal-600', link: '/services/homecare' },
-    { icon: FiActivity, title: 'Book a Test', color: 'text-teal-600', link: '/services/tests' },
-    { icon: FiGlobe, title: 'International Patients', color: 'text-teal-600', link: '/international' }
-  ];
-
-  const hospitalStats = [
-    { icon: FiUserCheck, label: 'Patients Treated', value: '50K+', color: 'text-blue-600', description: 'Happy patients across all departments' },
-    { icon: FiAward, label: 'Expert Doctors', value: '100+', color: 'text-green-600', description: 'Qualified specialists and consultants' },
-    { icon: FiStar, label: 'Patient Rating', value: '4.9/5', color: 'text-yellow-600', description: 'Average satisfaction rating' },
-    { icon: FiClock, label: 'Years of Service', value: '15+', color: 'text-purple-600', description: 'Trusted healthcare since 2009' },
-    { icon: FiActivity, label: 'Departments', value: '15+', color: 'text-teal-600', description: 'Specialized medical departments' },
-    { icon: FiShield, label: 'Success Rate', value: '98%', color: 'text-red-600', description: 'Treatment success across procedures' }
+    { icon: FiCheckCircle, title: 'Health Check', color: 'text-emerald-500', link: '/services/health-checkup' },
+    { icon: FiHome, title: 'Homecare', color: 'text-emerald-500', link: '/services/homecare' },
+    { icon: FiActivity, title: 'Book a Test', color: 'text-emerald-500', link: '/services/tests' },
+    { icon: FiGlobe, title: 'International', color: 'text-emerald-500', link: '/international' }
   ];
 
   const handleDepartmentSearch = (term) => {
     setDepartment(term);
     
-    // Clear selected department if search term doesn't match current selection
     if (selectedDepartmentId) {
       const selectedDept = allDepartments.find(d => d.id === selectedDepartmentId);
       if (selectedDept && !selectedDept.name.toLowerCase().includes(term.toLowerCase())) {
@@ -83,67 +73,53 @@ const Hero = () => {
     return '/appointment';
   };
 
-
   return (
     <div className="relative bg-gradient-to-r from-teal-800 via-teal-700 to-emerald-700 overflow-hidden">
-      {/* Black Overlay */}
-      <div className="absolute inset-0 bg-black/40"></div>
+      {/* Lighter Black Overlay */}
+      <div className="absolute inset-0 bg-black/25"></div>
 
-      {/* WhatsApp Button */}
-      {/* <div className="fixed right-6 bottom-6 z-50">
-        <a 
-          href="https://wa.me/914040123456" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
-        >
-          <SafeIcon icon={FiMessageCircle} className="w-6 h-6" />
-        </a>
-      </div> */}
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-14 sm:pt-24 lg:pt-28 lg:pb-28 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
-          {/* Left Content */}
-          <div className="text-white space-y-8">
-            <div className="space-y-4">
-              <p className="text-lg font-medium opacity-90">Our Medical Experts are here for you.</p>
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                Get quality medical care
-               
-                and treatment with us.
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 lg:pt-36 pb-12 sm:pb-16 lg:pb-20 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+          {/* Left Content - Compact */}
+          <div className="text-white space-y-6 lg:space-y-8">
+            <div className="space-y-3">
+              <p className="text-base lg:text-lg font-medium opacity-90">Medical Experts Ready for You</p>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+                Quality Medical Care
+                <span className="block text-emerald-100">& Treatment</span>
               </h1>
-              <p className="text-lg lg:text-xl opacity-90">
-                Find the required doctor and schedule your appointment now.
+              <p className="text-base lg:text-lg opacity-90 max-w-md">
+                Find specialist doctors and book appointments instantly.
               </p>
             </div>
 
-            {/* Search Bar */}
-            <div className="bg-white rounded-2xl shadow-2xl p-3 flex items-center gap-3 relative">
-              <div className="flex items-center gap-3 flex-1 relative">
-                <SafeIcon icon={FiSearch} className="text-gray-400 w-6 h-6" />
+            {/* Compact Search Bar */}
+            <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-xl p-2 sm:p-3 flex items-center gap-2 relative">
+              <div className="flex items-center gap-2 flex-1 relative">
+                <SafeIcon icon={FiSearch} className="text-gray-400 w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
                 <input
                   type="text"
-                  placeholder="Search for Department / Specialties (e.g., IVF, Pediatrics, Surgery...)"
+                  placeholder="Search departments (IVF, Pediatrics...)"
                   value={department}
                   onChange={(e) => handleDepartmentSearch(e.target.value)}
-                  className="w-full outline-none text-gray-700 placeholder-gray-400 text-lg py-2"
+                  className="w-full outline-none text-gray-700 placeholder-gray-400 text-base sm:text-lg py-2 px-1"
                 />
                 
-                {/* Department Dropdown */}
+                {/* Compact Dropdown */}
                 {showDropdown && filteredDepartments.length > 0 && (
-                  <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-lg border border-gray-200 z-50 max-h-64 overflow-y-auto">
+                  <div className="absolute top-full left-0 right-0 mt-1 bg-white rounded-xl shadow-2xl border border-gray-100 z-50 max-h-56 overflow-y-auto">
                     {filteredDepartments.map((dept) => (
                       <button
                         key={dept.id}
                         onClick={() => selectDepartment(dept)}
-                        className="flex items-center space-x-3 p-4 hover:bg-gray-50 transition-colors duration-200 border-b border-gray-100 last:border-b-0 w-full text-left"
+                        className="flex items-center space-x-3 p-3 hover:bg-emerald-50/50 transition-all duration-200 border-b border-gray-50 last:border-b-0 w-full text-left"
                       >
-                        <div className={`w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center ${dept.color}`}>
-                          <SafeIcon icon={dept.icon} className="text-xl" />
+                        <div className={`w-10 h-10 rounded-lg bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center ${dept.color} shadow-sm`}>
+                          <SafeIcon icon={dept.icon} className="text-lg" />
                         </div>
-                        <div>
-                          <div className="font-semibold text-gray-800">{dept.name}</div>
-                          <div className="text-sm text-gray-500">{dept.doctors} doctors • {dept.patients} patients • ⭐ {dept.rating}</div>
+                        <div className="min-w-0 flex-1">
+                          <div className="font-semibold text-gray-800 truncate">{dept.name}</div>
+                          <div className="text-xs text-gray-500">{dept.doctors} doctors • {dept.patients} • ⭐{dept.rating}</div>
                         </div>
                       </button>
                     ))}
@@ -153,51 +129,50 @@ const Hero = () => {
 
               <Link
                 to={getBookingLink()}
-                className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300 hover:shadow-lg whitespace-nowrap"
+                className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-5 py-2.5 sm:px-6 sm:py-3 rounded-xl font-semibold flex items-center gap-1.5 text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 whitespace-nowrap"
               >
-                {selectedDepartmentId ? 'Book Department' : 'Book Now'}
-                <SafeIcon icon={FiArrowRight} className="w-5 h-5" />
+                {selectedDepartmentId ? 'Book Now' : 'Book Dept'}
+                <SafeIcon icon={FiArrowRight} className="w-4 h-4 sm:w-5 sm:h-5" />
               </Link>
             </div>
           </div>
 
-          {/* Right Image - Medical Facilities */}
-          <div className="relative hidden lg:flex justify-center items-center">
-            <div className="relative w-full h-96 rounded-2xl">
+          {/* Right Image - Compact */}
+          <div className="relative lg:flex justify-center items-center hidden">
+            <div className="relative w-full max-w-md h-64 sm:h-72 lg:h-80 rounded-2xl overflow-hidden shadow-2xl">
               <img 
                 src="/homepage/Advanced Medical Facilities-Banner-image.png" 
                 alt="Advanced Medical Facilities"
-                className="w-full h-80 lg:h-96 rounded-2xl"
+                className="w-full h-full object-cover rounded-2xl"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
             </div>
           </div>
         </div>
 
-        {/* Service Cards */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mt-12 lg:mt-16">
+        {/* Compact Service Cards */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mt-8 lg:mt-12">
           {services.map((service, index) => (
             <Link
               key={index}
               to={service.link}
-              className="bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-2xl p-6 hover:bg-white hover:shadow-xl transition-all duration-300 cursor-pointer group"
+              className="bg-white/20 backdrop-blur-sm border border-white/40 rounded-xl p-4 sm:p-5 hover:bg-white/80 hover:shadow-2xl hover:border-emerald-200 transition-all duration-300 group relative overflow-hidden"
             >
               <div className="flex items-center justify-between">
-                <div className="flex items-center gap-4">
-                  <div className="bg-white rounded-xl p-3 group-hover:bg-teal-50 transition-all duration-300">
-                    <SafeIcon icon={service.icon} className={`w-6 h-6 ${service.color}`} />
+                <div className="flex items-center gap-3">
+                  <div className="w-11 h-11 rounded-xl bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-lg group-hover:bg-emerald-50 group-hover:scale-105 transition-all duration-300">
+                    <SafeIcon icon={service.icon} className={`w-5 h-5 sm:w-6 sm:h-6 ${service.color}`} />
                   </div>
-                  <span className="text-white font-semibold group-hover:text-gray-800 transition-all duration-300 text-sm lg:text-base">
+                  <span className="text-white font-semibold text-sm sm:text-base group-hover:text-gray-800 transition-all duration-300 truncate">
                     {service.title}
                   </span>
                 </div>
-                <SafeIcon icon={FiArrowRight} className="w-5 h-5 text-white group-hover:text-teal-600 transition-all duration-300" />
+                <SafeIcon icon={FiArrowRight} className="w-4 h-4 sm:w-5 sm:h-5 text-white/80 group-hover:text-emerald-600 transition-all duration-300 group-hover:translate-x-1" />
               </div>
             </Link>
           ))}
         </div>
       </div>
-
-      
     </div>
   );
 };
