@@ -46,14 +46,14 @@ const FaqSection = () => {
   };
 
   return (
-    <section id="faq" className="py-12 lg:py-16 bg-gradient-to-br from-gray-50 to-teal-50">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-10 lg:mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-4">
-            Frequently Asked <span className="text-transparent bg-gradient-to-r from-teal-500 to-emerald-500 bg-clip-text">Questions</span>
+    <section id="faq" className="py-3 lg:py-3 bg-gradient-to-br from-gray-50 to-teal-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-left mb-10 lg:mb-14">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Frequently Asked <span className="text-teal-600">Questions</span>
           </h2>
-          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Find answers to common questions about our services and procedures with confidence.
+          <p className="text-lg text-gray-600 max-w-2xl">
+            Find answers to common questions about our services and procedures
           </p>
         </div>
 

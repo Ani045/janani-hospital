@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import SafeIcon from '../common/SafeIcon';
 import * as FiIcons from 'react-icons/fi';
 
-const { 
-  FiArrowRight, FiPhone, FiHeart, FiBaby, FiUsers, FiActivity, FiScissors, 
+const {
+  FiArrowRight, FiPhone, FiHeart, FiBaby, FiUsers, FiActivity, FiScissors,
   FiDroplet, FiMonitor, FiEye, FiStar, FiTrendingUp, FiAward, FiShield,
   FiClock, FiUserCheck, FiMapPin, FiSearch, FiFilter, FiHome, FiCalendar,
   FiGlobe, FiCheckCircle, FiMessageCircle
@@ -37,16 +37,16 @@ const Hero = () => {
 
   const handleDepartmentSearch = (term) => {
     setDepartment(term);
-    
+
     if (selectedDepartmentId) {
       const selectedDept = allDepartments.find(d => d.id === selectedDepartmentId);
       if (selectedDept && !selectedDept.name.toLowerCase().includes(term.toLowerCase())) {
         setSelectedDepartmentId(null);
       }
     }
-    
+
     if (term.trim()) {
-      const filtered = allDepartments.filter(dept => 
+      const filtered = allDepartments.filter(dept =>
         dept.name.toLowerCase().includes(term.toLowerCase()) ||
         dept.keywords.some(keyword => keyword.toLowerCase().includes(term.toLowerCase()))
       );
@@ -78,7 +78,7 @@ const Hero = () => {
       {/* Lighter Black Overlay */}
       <div className="absolute inset-0 bg-black/25"></div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 lg:pt-36 pb-12 sm:pb-16 lg:pb-20 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 sm:pt-32 lg:pt-36 pb-12 sm:pb-16 lg:pb-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Left Content - Compact */}
           <div className="text-white space-y-6 lg:space-y-8">
@@ -104,7 +104,7 @@ const Hero = () => {
                   onChange={(e) => handleDepartmentSearch(e.target.value)}
                   className="w-full outline-none text-gray-700 placeholder-gray-400 text-base sm:text-lg py-2 px-1"
                 />
-                
+
                 {/* Compact Dropdown */}
                 {showDropdown && filteredDepartments.length > 0 && (
                   <div className="absolute top-full left-0 right-0 mt-1 bg-white rounded-xl shadow-2xl border border-gray-100 z-50 max-h-56 overflow-y-auto">
@@ -140,8 +140,8 @@ const Hero = () => {
           {/* Right Image - Compact */}
           <div className="relative lg:flex justify-center items-center hidden">
             <div className="relative w-full max-w-md h-64 sm:h-72 lg:h-80 rounded-2xl overflow-hidden shadow-2xl">
-              <img 
-                src="/homepage/Advanced Medical Facilities-Banner-image.png" 
+              <img
+                src="/homepage/Advanced Medical Facilities-Banner-image.png"
                 alt="Advanced Medical Facilities"
                 className="w-full h-full object-cover rounded-2xl"
               />

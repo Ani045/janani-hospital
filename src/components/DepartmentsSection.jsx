@@ -18,30 +18,46 @@ const DepartmentsSection = () => {
 
   const departments = [
     // Primary Departments (keeping expanded descriptions)
-    { id: 'ivf', name: 'IVF & Fertility', icon: FiHeart, bgColor: 'bg-pink-50', iconColor: 'text-pink-600', borderColor: 'border-pink-200', accentColor: 'bg-pink-600', gradientColor: 'from-pink-500 to-rose-600', 
-      description: 'Our IVF & Fertility department offers state-of-the-art reproductive technologies including advanced IVF cycles, ICSI procedures, and comprehensive fertility preservation options. With personalized treatment protocols and world-class embryology labs, we help couples achieve their parenthood dreams.', 
-      image: '/homepage/IVF & Fertility-Department.png', services: ['IVF Treatment', 'IUI Procedures', 'ICSI Treatment', 'Fertility Preservation', 'Embryo Freezing', 'PGD/PGS Testing'], doctors: 8, rating: 4.9, emergencyAvailable: false, patients: '2K+', experience: '15+ Years', priority: 'high' },
-    { id: 'pediatrics', name: 'Pediatrics', icon: FiBaby, bgColor: 'bg-blue-50', iconColor: 'text-blue-600', borderColor: 'border-blue-200', accentColor: 'bg-blue-600', gradientColor: 'from-blue-500 to-cyan-600', 
-      description: 'Comprehensive pediatric care from newborns to adolescents featuring child-friendly facilities, vaccination programs, developmental assessments, and specialized pediatric surgical services. Our expert team ensures holistic child health monitoring.', 
-      image: '/homepage/Pediatrics-Department.png', services: ['Newborn Care', 'Vaccination', 'Pediatric Surgery', 'Child Development', 'Growth Monitoring', 'Neonatal Intensive Care'], doctors: 12, rating: 4.9, emergencyAvailable: true, patients: '5K+', experience: '20+ Years', priority: 'high' },
-    { id: 'obg', name: 'OBG', icon: FiUsers, bgColor: 'bg-purple-50', iconColor: 'text-purple-600', borderColor: 'border-purple-200', accentColor: 'bg-purple-600', gradientColor: 'from-purple-500 to-violet-600', 
-      description: 'Complete women\'s healthcare encompassing high-risk pregnancy management, advanced gynecological surgeries, fertility treatments, and menopause care programs. Our OBG specialists provide comprehensive maternal-fetal medicine services.', 
-      image: '/homepage/OBG-Department.png', services: ['Maternity Care', 'Gynecological Surgery', 'High-Risk Pregnancy', 'Menopause Care', 'Laparoscopic Gynecology', 'Fetal Medicine'], doctors: 15, rating: 4.8, emergencyAvailable: true, patients: '3K+', experience: '25+ Years', priority: 'high' },
-    { id: 'medicine', name: 'General Medicine', icon: FiActivity, bgColor: 'bg-green-50', iconColor: 'text-green-600', borderColor: 'border-green-200', accentColor: 'bg-green-600', gradientColor: 'from-green-500 to-emerald-600', 
-      description: 'Primary care excellence for all age groups featuring comprehensive health checkups, chronic disease management programs, preventive healthcare initiatives, and personalized wellness counseling. Our internal medicine specialists focus on holistic patient care.', 
-      image: '/homepage/General-Medicine-Department.png', services: ['Primary Care', 'Chronic Disease Management', 'Preventive Health', 'Health Checkups', 'Executive Health Programs', 'Lifestyle Counseling'], doctors: 20, rating: 4.7, emergencyAvailable: true, patients: '8K+', experience: '30+ Years', priority: 'high' },
-    { id: 'surgery', name: 'General Surgery', icon: FiScissors, bgColor: 'bg-red-50', iconColor: 'text-red-600', borderColor: 'border-red-200', accentColor: 'bg-red-600', gradientColor: 'from-red-500 to-rose-600', 
-      description: 'Advanced general surgical procedures utilizing minimally invasive laparoscopic techniques, robotic-assisted surgeries, and day-care surgical options for rapid recovery and minimal scarring. Our surgeons specialize in complex abdominal procedures.', 
-      image: '/homepage/General-Surgery-Department.png', services: ['Laparoscopic Surgery', 'General Surgery', 'Emergency Surgery', 'Day Care Surgery', 'Robotic Surgery', 'Colorectal Surgery'], doctors: 10, rating: 4.8, emergencyAvailable: true, patients: '4K+', experience: '22+ Years', priority: 'high' },
-    { id: 'ortho', name: 'Orthopedics', icon: FiActivity, bgColor: 'bg-orange-50', iconColor: 'text-orange-600', borderColor: 'border-orange-200', accentColor: 'bg-orange-600', gradientColor: 'from-orange-500 to-amber-600', 
-      description: 'Complete musculoskeletal care including joint replacement surgeries, arthroscopic procedures, spine surgeries, and sports medicine rehabilitation programs. Our orthopedic specialists employ advanced implant technologies.', 
-      image: '/homepage/Orthopedics-Department.png', services: ['Joint Replacement', 'Arthroscopy', 'Spine Surgery', 'Sports Medicine', 'Trauma Care', 'Pediatric Orthopedics'], doctors: 8, rating: 4.9, emergencyAvailable: true, patients: '3K+', experience: '18+ Years', priority: 'high' },
-    { id: 'urology', name: 'Urology', icon: FiDroplet, bgColor: 'bg-cyan-50', iconColor: 'text-cyan-600', borderColor: 'border-cyan-200', accentColor: 'bg-cyan-600', gradientColor: 'from-cyan-500 to-blue-600', 
-      description: 'Comprehensive urological care for kidney stones, prostate disorders, urinary incontinence, and male infertility using laser technologies, endourology procedures, and reconstructive surgeries. Our specialists provide personalized treatment plans.', 
-      image: '/homepage/Urology-Department.png', services: ['Kidney Stone Treatment', 'Prostate Care', 'Urological Surgery', 'Laparoscopic Urology', 'Laser Lithotripsy', 'Male Infertility'], doctors: 6, rating: 4.8, emergencyAvailable: true, patients: '2K+', experience: '15+ Years', priority: 'high' },
-    { id: 'laparoscopy', name: 'Laparoscopy', icon: FiMonitor, bgColor: 'bg-indigo-50', iconColor: 'text-indigo-600', borderColor: 'border-indigo-200', accentColor: 'bg-indigo-600', gradientColor: 'from-indigo-500 to-purple-600', 
-      description: 'State-of-the-art minimally invasive surgical center offering advanced laparoscopic procedures across multiple specialties with 3D laparoscopy systems and single-incision techniques for superior precision.', 
-      image: '/homepage/Laparoscopy-Department.png', services: ['Laparoscopic Surgery', 'Diagnostic Laparoscopy', 'Minimally Invasive Procedures', 'Hernia Repair', 'Bariatric Surgery', 'Thoracoscopy'], doctors: 5, rating: 4.9, emergencyAvailable: false, patients: '1.5K+', experience: '12+ Years', priority: 'high' },
+    {
+      id: 'ivf', name: 'IVF & Fertility', icon: FiHeart, bgColor: 'bg-pink-50', iconColor: 'text-pink-600', borderColor: 'border-pink-200', accentColor: 'bg-pink-600', gradientColor: 'from-pink-500 to-rose-600',
+      description: 'Our IVF & Fertility department offers state-of-the-art reproductive technologies including advanced IVF cycles, ICSI procedures, and comprehensive fertility preservation options. With personalized treatment protocols and world-class embryology labs, we help couples achieve their parenthood dreams.',
+      image: '/homepage/IVF & Fertility-Department.png', services: ['IVF Treatment', 'IUI Procedures', 'ICSI Treatment', 'Fertility Preservation', 'Embryo Freezing', 'PGD/PGS Testing'], doctors: 8, rating: 4.9, emergencyAvailable: false, patients: '2K+', experience: '15+ Years', priority: 'high'
+    },
+    {
+      id: 'pediatrics', name: 'Pediatrics', icon: FiBaby, bgColor: 'bg-blue-50', iconColor: 'text-blue-600', borderColor: 'border-blue-200', accentColor: 'bg-blue-600', gradientColor: 'from-blue-500 to-cyan-600',
+      description: 'Comprehensive pediatric care from newborns to adolescents featuring child-friendly facilities, vaccination programs, developmental assessments, and specialized pediatric surgical services. Our expert team ensures holistic child health monitoring.',
+      image: '/homepage/Pediatrics-Department.png', services: ['Newborn Care', 'Vaccination', 'Pediatric Surgery', 'Child Development', 'Growth Monitoring', 'Neonatal Intensive Care'], doctors: 12, rating: 4.9, emergencyAvailable: true, patients: '5K+', experience: '20+ Years', priority: 'high'
+    },
+    {
+      id: 'obg', name: 'OBG', icon: FiUsers, bgColor: 'bg-purple-50', iconColor: 'text-purple-600', borderColor: 'border-purple-200', accentColor: 'bg-purple-600', gradientColor: 'from-purple-500 to-violet-600',
+      description: 'Complete women\'s healthcare encompassing high-risk pregnancy management, advanced gynecological surgeries, fertility treatments, and menopause care programs. Our OBG specialists provide comprehensive maternal-fetal medicine services.',
+      image: '/homepage/OBG-Department.png', services: ['Maternity Care', 'Gynecological Surgery', 'High-Risk Pregnancy', 'Menopause Care', 'Laparoscopic Gynecology', 'Fetal Medicine'], doctors: 15, rating: 4.8, emergencyAvailable: true, patients: '3K+', experience: '25+ Years', priority: 'high'
+    },
+    {
+      id: 'medicine', name: 'General Medicine', icon: FiActivity, bgColor: 'bg-green-50', iconColor: 'text-green-600', borderColor: 'border-green-200', accentColor: 'bg-green-600', gradientColor: 'from-green-500 to-emerald-600',
+      description: 'Primary care excellence for all age groups featuring comprehensive health checkups, chronic disease management programs, preventive healthcare initiatives, and personalized wellness counseling. Our internal medicine specialists focus on holistic patient care.',
+      image: '/homepage/General-Medicine-Department.png', services: ['Primary Care', 'Chronic Disease Management', 'Preventive Health', 'Health Checkups', 'Executive Health Programs', 'Lifestyle Counseling'], doctors: 20, rating: 4.7, emergencyAvailable: true, patients: '8K+', experience: '30+ Years', priority: 'high'
+    },
+    {
+      id: 'surgery', name: 'General Surgery', icon: FiScissors, bgColor: 'bg-red-50', iconColor: 'text-red-600', borderColor: 'border-red-200', accentColor: 'bg-red-600', gradientColor: 'from-red-500 to-rose-600',
+      description: 'Advanced general surgical procedures utilizing minimally invasive laparoscopic techniques, robotic-assisted surgeries, and day-care surgical options for rapid recovery and minimal scarring. Our surgeons specialize in complex abdominal procedures.',
+      image: '/homepage/General-Surgery-Department.png', services: ['Laparoscopic Surgery', 'General Surgery', 'Emergency Surgery', 'Day Care Surgery', 'Robotic Surgery', 'Colorectal Surgery'], doctors: 10, rating: 4.8, emergencyAvailable: true, patients: '4K+', experience: '22+ Years', priority: 'high'
+    },
+    {
+      id: 'ortho', name: 'Orthopedics', icon: FiActivity, bgColor: 'bg-orange-50', iconColor: 'text-orange-600', borderColor: 'border-orange-200', accentColor: 'bg-orange-600', gradientColor: 'from-orange-500 to-amber-600',
+      description: 'Complete musculoskeletal care including joint replacement surgeries, arthroscopic procedures, spine surgeries, and sports medicine rehabilitation programs. Our orthopedic specialists employ advanced implant technologies.',
+      image: '/homepage/Orthopedics-Department.png', services: ['Joint Replacement', 'Arthroscopy', 'Spine Surgery', 'Sports Medicine', 'Trauma Care', 'Pediatric Orthopedics'], doctors: 8, rating: 4.9, emergencyAvailable: true, patients: '3K+', experience: '18+ Years', priority: 'high'
+    },
+    {
+      id: 'urology', name: 'Urology', icon: FiDroplet, bgColor: 'bg-cyan-50', iconColor: 'text-cyan-600', borderColor: 'border-cyan-200', accentColor: 'bg-cyan-600', gradientColor: 'from-cyan-500 to-blue-600',
+      description: 'Comprehensive urological care for kidney stones, prostate disorders, urinary incontinence, and male infertility using laser technologies, endourology procedures, and reconstructive surgeries. Our specialists provide personalized treatment plans.',
+      image: '/homepage/Urology-Department.png', services: ['Kidney Stone Treatment', 'Prostate Care', 'Urological Surgery', 'Laparoscopic Urology', 'Laser Lithotripsy', 'Male Infertility'], doctors: 6, rating: 4.8, emergencyAvailable: true, patients: '2K+', experience: '15+ Years', priority: 'high'
+    },
+    {
+      id: 'laparoscopy', name: 'Laparoscopy', icon: FiMonitor, bgColor: 'bg-indigo-50', iconColor: 'text-indigo-600', borderColor: 'border-indigo-200', accentColor: 'bg-indigo-600', gradientColor: 'from-indigo-500 to-purple-600',
+      description: 'State-of-the-art minimally invasive surgical center offering advanced laparoscopic procedures across multiple specialties with 3D laparoscopy systems and single-incision techniques for superior precision.',
+      image: '/homepage/Laparoscopy-Department.png', services: ['Laparoscopic Surgery', 'Diagnostic Laparoscopy', 'Minimally Invasive Procedures', 'Hernia Repair', 'Bariatric Surgery', 'Thoracoscopy'], doctors: 5, rating: 4.9, emergencyAvailable: false, patients: '1.5K+', experience: '12+ Years', priority: 'high'
+    },
     // ... rest of departments remain same
     { id: 'neonatology', name: 'Neonatology', icon: FiBaby, bgColor: 'bg-pink-50', iconColor: 'text-pink-600', borderColor: 'border-pink-200', accentColor: 'bg-pink-600', gradientColor: 'from-pink-500 to-rose-600', description: 'Specialized intensive care for newborn infants with critical medical needs.', image: '/homepage/Neonatology-Department.png', services: ['NICU Care', 'Neonatal Surgery', 'Premature Baby Care', 'Newborn Screening'], doctors: 4, rating: 4.9, emergencyAvailable: true, patients: '800+', experience: '10+ Years', priority: 'medium' },
     { id: 'critical-care', name: 'Critical Care', icon: FiHeart, bgColor: 'bg-red-50', iconColor: 'text-red-600', borderColor: 'border-red-200', accentColor: 'bg-red-600', gradientColor: 'from-red-500 to-rose-600', description: 'Intensive care units with advanced life support systems and critical care specialists.', image: '/homepage/Critical-Care.png', services: ['ICU Care', 'Ventilator Support', 'Critical Care Medicine', 'Emergency Response'], doctors: 12, rating: 4.8, emergencyAvailable: true, patients: '2K+', experience: '20+ Years', priority: 'medium' },
@@ -98,16 +114,15 @@ const DepartmentsSection = () => {
 
         {/* Compact Filter Carousel */}
         <div className="relative mb-8">
-          <div className="flex items-center max-w-6xl mx-auto">
+          <div className="flex items-center max-w-7xl mx-auto">
             {/* Left Scroll Button */}
             <button
               onClick={scrollLeft}
               disabled={!canScrollLeft}
-              className={`hidden md:flex items-center justify-center w-9 h-9 rounded-full bg-white border transition-all duration-300 shadow-md hover:shadow-lg ${
-                canScrollLeft
+              className={`hidden md:flex items-center justify-center w-9 h-9 rounded-full bg-white border transition-all duration-300 shadow-md hover:shadow-lg ${canScrollLeft
                   ? 'border-teal-300 text-teal-600 hover:border-teal-500 hover:bg-teal-50 hover:scale-105'
                   : 'border-gray-200 text-gray-400 cursor-not-allowed'
-              }`}
+                }`}
             >
               <SafeIcon icon={FiChevronLeft} className="text-sm" />
             </button>
@@ -122,11 +137,10 @@ const DepartmentsSection = () => {
                 <button
                   key={department.id}
                   onClick={() => setActiveFilter(department.id)}
-                  className={`snap-start flex items-center space-x-2 px-4 py-2 rounded-full font-medium transition-all duration-200 whitespace-nowrap text-xs md:text-sm border hover:scale-[1.02] ${
-                    activeFilter === department.id
+                  className={`snap-start flex items-center space-x-2 px-4 py-2 rounded-full font-medium transition-all duration-200 whitespace-nowrap text-xs md:text-sm border hover:scale-[1.02] ${activeFilter === department.id
                       ? `${department.bgColor} ${department.iconColor} ${department.borderColor} shadow-md ring-1 ring-teal-200/50 scale-[1.02]`
                       : 'bg-white text-gray-700 hover:bg-gray-50 border-gray-200 hover:border-gray-300 hover:shadow-md'
-                  }`}
+                    }`}
                 >
                   <SafeIcon icon={department.icon} className="text-sm flex-shrink-0" />
                   <span className="font-semibold">{department.name}</span>
@@ -141,11 +155,10 @@ const DepartmentsSection = () => {
             <button
               onClick={scrollRight}
               disabled={!canScrollRight}
-              className={`hidden md:flex items-center justify-center w-9 h-9 rounded-full bg-white border transition-all duration-300 shadow-md hover:shadow-lg ${
-                canScrollRight
+              className={`hidden md:flex items-center justify-center w-9 h-9 rounded-full bg-white border transition-all duration-300 shadow-md hover:shadow-lg ${canScrollRight
                   ? 'border-teal-300 text-teal-600 hover:border-teal-500 hover:bg-teal-50 hover:scale-105'
                   : 'border-gray-200 text-gray-400 cursor-not-allowed'
-              }`}
+                }`}
             >
               <SafeIcon icon={FiChevronRight} className="text-sm" />
             </button>
@@ -164,7 +177,7 @@ const DepartmentsSection = () => {
                     alt={currentDepartment.name}
                     className="w-full h-full object-cover"
                   />
-                  
+
                   {/* Priority Badge */}
                   {currentDepartment.priority === 'high' && (
                     <div className="absolute top-4 left-4 z-10">
@@ -173,7 +186,7 @@ const DepartmentsSection = () => {
                       </div>
                     </div>
                   )}
-                  
+
                   {/* Emergency Badge */}
                   {currentDepartment.emergencyAvailable && (
                     <div className="absolute top-4 right-4 z-10">
@@ -182,7 +195,7 @@ const DepartmentsSection = () => {
                       </div>
                     </div>
                   )}
-                  
+
                   {/* Bottom Info */}
                   <div className="absolute bottom-4 left-3 right-3 z-10">
                     <div className="bg-white/95 backdrop-blur-md rounded-2xl p-3 border border-white/60 shadow-2xl">
@@ -230,7 +243,7 @@ const DepartmentsSection = () => {
                       <div className="text-lg lg:text-2xl font-bold text-gray-800 mb-0 lg:mb-1">{currentDepartment.doctors}</div>
                       <div className="text-xs text-gray-600 font-medium uppercase tracking-wide">Doctors</div>
                     </div>
-                    
+
                     {/* Services Count */}
                     <div className="group p-2 lg:p-3 bg-gradient-to-r from-emerald-50 to-emerald-100 rounded-lg lg:rounded-xl border border-emerald-200/50 shadow-sm hover:shadow-lg transition-all flex flex-col justify-center hover:scale-[1.02] h-16 lg:h-20">
                       <div className="text-lg lg:text-2xl font-bold text-emerald-700">{currentDepartment.services.length}</div>
