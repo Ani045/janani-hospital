@@ -29,23 +29,23 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-16 lg:py-20 bg-gray-50">
+    <section id="contact" className="py-12 lg:py-14 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-left mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+        <div className="text-left mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
             Get In <span className="text-teal-600">Touch</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl">
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl">
             Have questions about your health? Our expert team is here to help you 24/7. Reach out to us for any medical assistance.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Contact Info */}
           <div className="lg:col-span-1 space-y-4">
-            <div className="bg-white rounded-xl p-5 shadow-md border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-800 mb-5">Contact Information</h3>
+            <div className="bg-white rounded-xl p-4 shadow-md border border-gray-100">
+              <h3 className="text-lg font-bold text-gray-800 mb-4">Contact Information</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <div className="w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -89,8 +89,8 @@ const ContactSection = () => {
 
           {/* Contact Form */}
           <div className="lg:col-span-2">
-            <div className="bg-white rounded-xl p-6 shadow-md border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-800 mb-5">Send us a Message</h3>
+            <div className="bg-white rounded-xl p-5 shadow-md border border-gray-100">
+              <h3 className="text-lg font-bold text-gray-800 mb-4">Send us a Message</h3>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
@@ -156,9 +156,8 @@ const ContactSection = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full bg-teal-600 text-white py-3 rounded-lg font-semibold hover:bg-teal-700 transition-all duration-300 flex items-center justify-center space-x-2 ${
-                    isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:shadow-md'
-                  }`}
+                  className={`w-full bg-teal-600 text-white py-3 rounded-lg font-semibold hover:bg-teal-700 transition-all duration-300 flex items-center justify-center space-x-2 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : 'hover:shadow-md'
+                    }`}
                 >
                   {isSubmitting ? (
                     <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
@@ -175,10 +174,10 @@ const ContactSection = () => {
         </div>
 
         {/* Emergency Contact */}
-        <div className="mt-10 text-center">
-          <div className="bg-red-600 rounded-xl p-6 text-white">
-            <h3 className="text-xl font-bold mb-3">Medical Emergency?</h3>
-            <p className="text-lg mb-4 opacity-90">Call our 24/7 emergency hotline for immediate assistance</p>
+        <div className="mt-8 text-center">
+          <div className="bg-red-600 rounded-xl p-5 text-white">
+            <h3 className="text-lg font-bold mb-2">Medical Emergency?</h3>
+            <p className="text-base mb-3 opacity-90">Call our 24/7 emergency hotline for immediate assistance</p>
             <a
               href="tel:+914040123456"
               className="bg-white text-red-600 px-6 py-3 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 inline-flex items-center space-x-2 shadow-md hover:shadow-lg"

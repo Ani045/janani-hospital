@@ -120,8 +120,8 @@ const DepartmentsSection = () => {
               onClick={scrollLeft}
               disabled={!canScrollLeft}
               className={`hidden md:flex items-center justify-center w-9 h-9 rounded-full bg-white border transition-all duration-300 shadow-md hover:shadow-lg ${canScrollLeft
-                  ? 'border-teal-300 text-teal-600 hover:border-teal-500 hover:bg-teal-50 hover:scale-105'
-                  : 'border-gray-200 text-gray-400 cursor-not-allowed'
+                ? 'border-teal-300 text-teal-600 hover:border-teal-500 hover:bg-teal-50 hover:scale-105'
+                : 'border-gray-200 text-gray-400 cursor-not-allowed'
                 }`}
             >
               <SafeIcon icon={FiChevronLeft} className="text-sm" />
@@ -138,8 +138,8 @@ const DepartmentsSection = () => {
                   key={department.id}
                   onClick={() => setActiveFilter(department.id)}
                   className={`snap-start flex items-center space-x-2 px-4 py-2 rounded-full font-medium transition-all duration-200 whitespace-nowrap text-xs md:text-sm border hover:scale-[1.02] ${activeFilter === department.id
-                      ? `${department.bgColor} ${department.iconColor} ${department.borderColor} shadow-md ring-1 ring-teal-200/50 scale-[1.02]`
-                      : 'bg-white text-gray-700 hover:bg-gray-50 border-gray-200 hover:border-gray-300 hover:shadow-md'
+                    ? `${department.bgColor} ${department.iconColor} ${department.borderColor} shadow-md ring-1 ring-teal-200/50 scale-[1.02]`
+                    : 'bg-white text-gray-700 hover:bg-gray-50 border-gray-200 hover:border-gray-300 hover:shadow-md'
                     }`}
                 >
                   <SafeIcon icon={department.icon} className="text-sm flex-shrink-0" />
@@ -156,8 +156,8 @@ const DepartmentsSection = () => {
               onClick={scrollRight}
               disabled={!canScrollRight}
               className={`hidden md:flex items-center justify-center w-9 h-9 rounded-full bg-white border transition-all duration-300 shadow-md hover:shadow-lg ${canScrollRight
-                  ? 'border-teal-300 text-teal-600 hover:border-teal-500 hover:bg-teal-50 hover:scale-105'
-                  : 'border-gray-200 text-gray-400 cursor-not-allowed'
+                ? 'border-teal-300 text-teal-600 hover:border-teal-500 hover:bg-teal-50 hover:scale-105'
+                : 'border-gray-200 text-gray-400 cursor-not-allowed'
                 }`}
             >
               <SafeIcon icon={FiChevronRight} className="text-sm" />
@@ -238,10 +238,13 @@ const DepartmentsSection = () => {
 
                   {/* Stats - Mobile Optimized */}
                   <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-3 mb-4 lg:mb-5">
-                    {/* Doctors */}
+                    {/* Rating */}
                     <div className="group p-2 lg:p-3 bg-white/90 backdrop-blur-sm rounded-lg lg:rounded-xl border border-gray-200/50 shadow-sm hover:shadow-lg transition-all flex flex-col justify-center hover:scale-[1.02] h-16 lg:h-20">
-                      <div className="text-lg lg:text-2xl font-bold text-gray-800 mb-0 lg:mb-1">{currentDepartment.doctors}</div>
-                      <div className="text-xs text-gray-600 font-medium uppercase tracking-wide">Doctors</div>
+                      <div className="text-lg lg:text-2xl font-bold text-yellow-500 mb-0 lg:mb-1 flex items-center gap-1">
+                        <SafeIcon icon={FiStar} className="text-sm lg:text-base" />
+                        {currentDepartment.rating}
+                      </div>
+                      <div className="text-xs text-gray-600 font-medium uppercase tracking-wide">Rating</div>
                     </div>
 
                     {/* Services Count */}

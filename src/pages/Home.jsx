@@ -17,7 +17,6 @@ const Home = () => {
   <JananiHospitalSections />
  {/* <DoctorsSection /> */}
  <TestimonialsSection />
-
  <FaqSection />
  <ContactSection />
  </>

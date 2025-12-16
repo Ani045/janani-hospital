@@ -59,11 +59,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-[150] transition-all duration-500 ease-out ${
-        isScrolled 
-          ? 'bg-white/95 backdrop-blur-xl shadow-xl py-2 sm:py-3 border-b border-gray-200' 
-          : 'py-3 sm:py-4 bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 w-full z-[150] transition-all duration-500 ease-out ${isScrolled
+        ? 'bg-white/95 backdrop-blur-xl shadow-xl py-2 sm:py-3 border-b border-gray-200'
+        : 'py-3 sm:py-4 bg-transparent'
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-12 sm:h-14 lg:h-16">
@@ -71,48 +70,43 @@ const Navbar = () => {
           <Link to="/" className="flex items-center space-x-2 group">
             <img src="logo.png"
               alt="Janani Hospital"
-              className={`h-12 sm:h-16 lg:h-20 w-auto transition-all duration-300 opacity-90 group-hover:opacity-100 ${isScrolled ? 'mix-blend-multiply' : 'mix-blend-normal'}`}
+              className={`h-12 sm:h-16 lg:h-20 w-auto transition-all duration-300 opacity-90 group-hover:opacity-100 ${isScrolled ? '' : 'brightness-0 invert'}`}
             />
-            <span className={`text-xl font-bold hidden lg:block transition-all duration-300 ${
-              isScrolled 
-                ? 'text-gray-900' 
-                : 'bg-gradient-to-r from-white via-white/90 to-white/80 bg-clip-text text-transparent drop-shadow-lg'
-            } ${isScrolled ? 'text-lg' : 'text-xl'}`}>
-             
+            <span className={`text-xl font-bold hidden lg:block transition-all duration-300 ${isScrolled
+              ? 'text-gray-900'
+              : 'bg-gradient-to-r from-white via-white/90 to-white/80 bg-clip-text text-transparent drop-shadow-lg'
+              } ${isScrolled ? 'text-lg' : 'text-xl'}`}>
+
             </span>
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden xl:flex items-center space-x-8">
-            <Link
+            {/* <Link
               to="/"
-              className={`relative font-semibold text-sm px-3 py-8 mb-2 transition-all duration-300 group ${
-                location.pathname === '/' 
-                  ? (isScrolled ? 'text-emerald-600' : 'text-white drop-shadow-lg') 
+              className={`relative font-semibold text-sm px-3 py-8 mb-2 transition-all duration-300 group ${location.pathname === '/'
+                  ? (isScrolled ? 'text-emerald-600' : 'text-white drop-shadow-lg')
                   : (isScrolled ? 'text-gray-700 hover:text-emerald-600' : 'text-white/90 hover:text-white drop-shadow-lg')
-              } ${isScrolled ? 'after:bg-emerald-600' : 'after:bg-white/80'}`}
+                } ${isScrolled ? 'after:bg-emerald-600' : 'after:bg-white/80'}`}
             >
               Home
               {location.pathname === '/' && (
-                <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 rounded-full transition-all duration-300 group-hover:w-full ${
-                  isScrolled ? 'bg-emerald-600' : 'bg-white/80'
-                }`} 
+                <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 rounded-full transition-all duration-300 group-hover:w-full ${isScrolled ? 'bg-emerald-600' : 'bg-white/80'
+                  }`}
                 />
               )}
-            </Link>
+            </Link> */}
             <Link
               to="/about"
-              className={`relative font-semibold text-sm px-3 py-2 transition-all duration-300 group ${
-                location.pathname === '/about' 
-                  ? (isScrolled ? 'text-emerald-600' : 'text-white drop-shadow-lg') 
-                  : (isScrolled ? 'text-gray-700 hover:text-emerald-600' : 'text-white/90 hover:text-white drop-shadow-lg')
-              } ${isScrolled ? 'after:bg-emerald-600' : 'after:bg-white/80'}`}
+              className={`relative font-semibold text-sm px-3 py-2 transition-all duration-300 group ${location.pathname === '/about'
+                ? (isScrolled ? 'text-emerald-600' : 'text-white drop-shadow-lg')
+                : (isScrolled ? 'text-gray-700 hover:text-emerald-600' : 'text-white/90 hover:text-white drop-shadow-lg')
+                } ${isScrolled ? 'after:bg-emerald-600' : 'after:bg-white/80'}`}
             >
               About
               {location.pathname === '/about' && (
-                <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 rounded-full transition-all duration-300 group-hover:w-full ${
-                  isScrolled ? 'bg-emerald-600' : 'bg-white/80'
-                }`} 
+                <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 rounded-full transition-all duration-300 group-hover:w-full ${isScrolled ? 'bg-emerald-600' : 'bg-white/80'
+                  }`}
                 />
               )}
             </Link>
@@ -123,11 +117,10 @@ const Navbar = () => {
               onMouseEnter={() => handleMouseEnter('departments')}
               onMouseLeave={handleMouseLeave}
             >
-              <button className={`flex items-center space-x-2 font-semibold text-sm px-3 py-2 transition-all duration-300 group relative ${
-                activeDropdown === 'departments' 
-                  ? (isScrolled ? 'text-emerald-600 font-bold' : 'text-white drop-shadow-lg font-bold') 
-                  : (isScrolled ? 'text-gray-700 hover:text-emerald-600' : 'text-white/90 hover:text-white drop-shadow-lg')
-              }`}>
+              <button className={`flex items-center space-x-2 font-semibold text-sm px-3 py-2 transition-all duration-300 group relative ${activeDropdown === 'departments'
+                ? (isScrolled ? 'text-emerald-600 font-bold' : 'text-white drop-shadow-lg font-bold')
+                : (isScrolled ? 'text-gray-700 hover:text-emerald-600' : 'text-white/90 hover:text-white drop-shadow-lg')
+                }`}>
                 <span>Departments</span>
                 <SafeIcon
                   icon={FiChevronDown}
@@ -187,11 +180,10 @@ const Navbar = () => {
 
             <Link
               to="/contact"
-              className={`relative font-semibold text-sm px-3 py-2 transition-all duration-300 group ${
-                location.pathname === '/contact' 
-                  ? (isScrolled ? 'text-emerald-600' : 'text-white drop-shadow-lg') 
-                  : (isScrolled ? 'text-gray-700 hover:text-emerald-600' : 'text-white/90 hover:text-white drop-shadow-lg')
-              }`}
+              className={`relative font-semibold text-sm px-3 py-2 transition-all duration-300 group ${location.pathname === '/contact'
+                ? (isScrolled ? 'text-emerald-600' : 'text-white drop-shadow-lg')
+                : (isScrolled ? 'text-gray-700 hover:text-emerald-600' : 'text-white/90 hover:text-white drop-shadow-lg')
+                }`}
             >
               Contact
             </Link>
@@ -201,11 +193,10 @@ const Navbar = () => {
           <div className="hidden xl:block">
             <Link
               to="/appointment"
-              className={`group px-6 py-2.5 rounded-xl font-semibold text-sm flex items-center space-x-2 transition-all duration-300 shadow-lg ${
-                isScrolled 
-                  ? 'bg-emerald-600 text-white hover:bg-emerald-700 hover:shadow-xl hover:-translate-y-0.5' 
-                  : 'bg-white/90 text-emerald-600 backdrop-blur hover:bg-white hover:shadow-xl hover:-translate-y-0.5 drop-shadow-lg'
-              }`}
+              className={`group px-6 py-2.5 rounded-xl font-semibold text-sm flex items-center space-x-2 transition-all duration-300 shadow-lg ${isScrolled
+                ? 'bg-emerald-600 text-white hover:bg-emerald-700 hover:shadow-xl hover:-translate-y-0.5'
+                : 'bg-white/90 text-emerald-600 backdrop-blur hover:bg-white hover:shadow-xl hover:-translate-y-0.5 drop-shadow-lg'
+                }`}
             >
               <SafeIcon icon={FiCalendar} className="text-sm group-hover:rotate-12 transition-transform duration-300" />
               <span>Book Appointment</span>
@@ -217,9 +208,9 @@ const Navbar = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="xl:hidden p-2 rounded-xl hover:bg-white/50 backdrop-blur-sm transition-all duration-300 hover:scale-110"
           >
-            <SafeIcon 
-              icon={isMobileMenuOpen ? FiX : FiMenu} 
-              className={`text-xl transition-all duration-300 ${isScrolled ? 'text-gray-900' : 'text-white drop-shadow-lg'}`} 
+            <SafeIcon
+              icon={isMobileMenuOpen ? FiX : FiMenu}
+              className={`text-xl transition-all duration-300 ${isScrolled ? 'text-gray-900' : 'text-white drop-shadow-lg'}`}
             />
           </button>
         </div>
@@ -230,11 +221,10 @@ const Navbar = () => {
             <div className="flex flex-col space-y-2 px-4">
               <Link
                 to="/"
-                className={`font-semibold text-sm py-2.5 px-3 rounded-lg transition-all duration-300 flex items-center space-x-3 ${
-                  location.pathname === '/' 
-                    ? 'text-emerald-600 bg-emerald-50' 
-                    : 'text-gray-800 hover:text-emerald-600 hover:bg-gray-50'
-                }`}
+                className={`font-semibold text-sm py-2.5 px-3 rounded-lg transition-all duration-300 flex items-center space-x-3 ${location.pathname === '/'
+                  ? 'text-emerald-600 bg-emerald-50'
+                  : 'text-gray-800 hover:text-emerald-600 hover:bg-gray-50'
+                  }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 bg-emerald-100">
@@ -244,11 +234,10 @@ const Navbar = () => {
               </Link>
               <Link
                 to="/about"
-                className={`font-semibold text-sm py-2.5 px-3 rounded-lg transition-all duration-300 flex items-center space-x-3 ${
-                  location.pathname === '/about'
-                    ? 'text-emerald-600 bg-emerald-50' 
-                    : 'text-gray-800 hover:text-emerald-600 hover:bg-gray-50'
-                }`}
+                className={`font-semibold text-sm py-2.5 px-3 rounded-lg transition-all duration-300 flex items-center space-x-3 ${location.pathname === '/about'
+                  ? 'text-emerald-600 bg-emerald-50'
+                  : 'text-gray-800 hover:text-emerald-600 hover:bg-gray-50'
+                  }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 bg-teal-100">
@@ -299,11 +288,10 @@ const Navbar = () => {
 
               <Link
                 to="/contact"
-                className={`font-semibold text-sm py-2.5 px-3 rounded-lg transition-all duration-300 flex items-center space-x-3 ${
-                  location.pathname === '/contact'
-                    ? 'text-emerald-600 bg-emerald-50' 
-                    : 'text-gray-800 hover:text-emerald-600 hover:bg-gray-50'
-                }`}
+                className={`font-semibold text-sm py-2.5 px-3 rounded-lg transition-all duration-300 flex items-center space-x-3 ${location.pathname === '/contact'
+                  ? 'text-emerald-600 bg-emerald-50'
+                  : 'text-gray-800 hover:text-emerald-600 hover:bg-gray-50'
+                  }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 bg-purple-100">

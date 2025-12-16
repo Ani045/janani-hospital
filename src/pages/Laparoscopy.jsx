@@ -61,9 +61,10 @@ const Laparoscopy = () => {
         ]
     };
 
+
     return (
         <div className=" bg-gray-50">
-            <section className="relative min-h-[400px] h-[50vh] sm:h-[55vh] md:h-[60vh]">
+            <section className="relative min-h-[400px] h-[50vh] sm:h-[55vh] md:h-[60vh] pt-24 sm:pt-24">
                 <div
                     className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                     style={{ backgroundImage: `url(${departmentData.hero})` }}
@@ -72,20 +73,16 @@ const Laparoscopy = () => {
                 <div className="absolute inset-0 flex items-center z-10">
                     <div className="container mx-auto px-4 sm:px-6 md:px-12">
                         <div className="text-white max-w-4xl">
-                            <Link to="/" className="inline-flex items-center space-x-1.5 text-white/90 hover:text-white mb-3 sm:mb-4 transition-colors group">
-                                <SafeIcon icon={FiArrowLeft} className="text-xs sm:text-sm group-hover:-translate-x-1 transition-transform" />
-                                <span className="text-xs sm:text-sm font-medium">Back to Home</span>
-                            </Link>
                             <div className="flex items-center space-x-3 sm:space-x-4 mb-3 sm:mb-4">
                                 <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-teal-500/30 backdrop-blur-md rounded-xl sm:rounded-2xl flex items-center justify-center border-2 border-teal-400/50 shadow-xl flex-shrink-0">
                                     <SafeIcon icon={FiMonitor} className="text-2xl sm:text-3xl md:text-4xl text-white" />
                                 </div>
                                 <div>
-                                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">{departmentData.name}</h1>
+                                    <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-tight">{departmentData.name}</h1>
                                     <p className="text-sm sm:text-base md:text-lg text-teal-100 mt-1 sm:mt-2 font-medium">Minimally Invasive Surgery Excellence</p>
                                 </div>
                             </div>
-                            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/95 max-w-3xl leading-relaxed">{departmentData.description}</p>
+                            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-white/95 max-w-3xl leading-relaxed">{departmentData.description}</p>
                             <div className="flex flex-wrap gap-2 sm:gap-3 mt-4 sm:mt-6">
                                 <Link to="/appointment" className="bg-white text-teal-700 px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg text-sm sm:text-base font-semibold hover:bg-teal-50 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center space-x-1.5 sm:space-x-2">
                                     <SafeIcon icon={FiCalendar} className="text-base sm:text-lg" />
@@ -257,46 +254,7 @@ const Laparoscopy = () => {
                 </div>
             </section>
 
-            <section className="py-12 bg-gray-50">
-                <div className="container mx-auto px-4">
-                    <div className="text-center mb-10">
-                        <div className="inline-block mb-4">
-                            <span className="bg-teal-100 text-teal-700 px-4 py-2 rounded-full text-sm font-semibold">Our Team</span>
-                        </div>
-                        <h2 className="text-3xl font-bold text-gray-800 mb-3">Our Laparoscopy Experts</h2>
-                        <p className="text-gray-600">Meet our team of skilled laparoscopic surgeons dedicated to minimally invasive excellence</p>
-                    </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {departmentData.doctors.map((doctor, index) => (
-                            <div key={index} className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden group border border-gray-100">
-                                <div className="relative overflow-hidden h-48">
-                                    <img src={doctor.image} alt={doctor.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                                    <div className="absolute top-2 right-2 bg-white/90 rounded-full px-2 py-1 flex items-center space-x-1 shadow">
-                                        <SafeIcon icon={FiStar} className="text-yellow-400 text-xs" />
-                                        <span className="text-xs font-bold">{doctor.rating}</span>
-                                    </div>
-                                </div>
-                                <div className="p-4">
-                                    <h3 className="text-sm font-bold text-gray-800">{doctor.name}</h3>
-                                    <p className="text-teal-600 font-semibold text-xs mt-0.5">{doctor.specialization}</p>
-                                    <p className="text-gray-500 text-xs mt-1">{doctor.experience}</p>
-                                    <div className="mt-2 mb-3">
-                                        <div className="flex flex-wrap gap-1">
-                                            {doctor.expertise.slice(0, 2).map((exp, idx) => (
-                                                <span key={idx} className="bg-red-50 text-red-700 px-1.5 py-0.5 rounded text-xs font-medium">{exp}</span>
-                                            ))}
-                                        </div>
-                                    </div>
-                                    <Link to="/appointment" className="w-full bg-teal-600 text-white py-2 rounded-lg font-semibold hover:bg-teal-700 transition-all flex items-center justify-center space-x-1 text-xs">
-                                        <SafeIcon icon={FiCalendar} className="text-xs" />
-                                        <span>Book Now</span>
-                                    </Link>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
+
 
             <section className="py-12 bg-white">
                 <div className="container mx-auto px-4">
