@@ -31,6 +31,7 @@ import Hysteroscopy from './pages/Hysteroscopy';
 import Gallery from './pages/Gallery';
 import MembershipHealthCart from './pages/MembershipHealthCart';
 import BookLabTest from './pages/BookLabTest';
+import ThankYou from './pages/ThankYou';
 
 function App() {
   return (
@@ -43,7 +44,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/appointment" element={<Contact />} />
-            
+
             {/* Specific Department Routes */}
             <Route path="/department/ivf" element={<IVF />} />
             <Route path="/department/pediatrics" element={<Paediatrics />} />
@@ -59,7 +60,7 @@ function App() {
             <Route path="/department/infertility" element={<Infertility />} />
             <Route path="/department/endoscopy" element={<Endoscopy />} />
             <Route path="/department/hysteroscopy" element={<Hysteroscopy />} />
-            
+
             {/* Dynamic department route handles others like /department/medicine */}
             <Route path="/department/:id" element={<DepartmentDetail />} />
 
@@ -67,6 +68,7 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/health-packages" element={<MembershipHealthCart />} />
             <Route path="/book-lab-test" element={<BookLabTest />} />
+            <Route path="/thank-you" element={<ThankYou />} />
           </Routes>
         </main>
         <Footer />

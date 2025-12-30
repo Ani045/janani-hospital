@@ -295,9 +295,9 @@ const DepartmentsSection = () => {
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between pt-3 border-t border-gray-200/50 gap-3 lg:gap-0">
                     {/* Contact - Mobile Optimized */}
                     <div className="flex items-center space-x-3 lg:space-x-4 text-sm">
-                      <a href="tel:+914040123456" className="flex items-center space-x-1.5 text-gray-700 hover:text-teal-600 font-medium transition-all group">
+                      <a href="tel:+917090831208" className="flex items-center space-x-1.5 text-gray-700 hover:text-teal-600 font-medium transition-all group">
                         <SafeIcon icon={FiPhone} className="text-sm group-hover:scale-110" />
-                        <span className="hidden sm:inline">+91 40 4012 3456</span>
+                        <span className="hidden sm:inline">+91 70908 31208</span>
                         <span className="sm:hidden">Call Now</span>
                       </a>
                       <div className="w-px h-4 bg-gray-300 hidden sm:block" />

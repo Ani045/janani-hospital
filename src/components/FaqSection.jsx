@@ -10,7 +10,7 @@ const FaqSection = () => {
   const faqs = [
     {
       question: 'How do I book an appointment?',
-      answer: 'You can book an appointment through our website by clicking the "Book Appointment" button, or by calling our reception at +91 40 4012 3456. We also accept walk-in appointments, but booking in advance is recommended.',
+      answer: 'You can book an appointment through our website by clicking the "Book Appointment" button, or by calling our reception at +91 70908 31208. We also accept walk-in appointments, but booking in advance is recommended.',
     },
     {
       question: 'What are the visiting hours?',

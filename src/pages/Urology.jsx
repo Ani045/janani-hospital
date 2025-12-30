@@ -52,7 +52,7 @@ const Urology = () => {
             { name: 'Meera Reddy', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80', rating: 5, review: "The urology team provided excellent care for my father's prostate treatment. Professional, caring, and highly skilled doctors." },
             { name: 'Suresh Kumar', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80', rating: 5, review: "Amazing experience with the endourology department. State-of-the-art facilities and expert doctors made my treatment successful." }
         ],
-        contact: { phone: '+91 9876543217', email: 'urology@jananihospital.com', location: 'Block G, 2nd Floor', hours: '24/7 Emergency | OPD: 9 AM - 6 PM' },
+        contact: { phone: '+91 70908 31208', email: 'Jananihospital2018@gmail.com', location: 'Block G, 2nd Floor', hours: '24/7 Emergency | OPD: 9 AM - 6 PM' },
         faq: [
             { question: 'What are the common symptoms of a urinary tract infection (UTI)?', answer: 'Common symptoms include a frequent urge to urinate, a burning sensation during urination, cloudy or strong-smelling urine, and pelvic pain. If you experience these symptoms, it is important to consult a urologist.' },
             { question: 'How are kidney stones treated?', answer: 'Treatment for kidney stones depends on their size and location. Small stones may pass on their own, while larger stones may require procedures like laser lithotripsy (breaking stones with a laser) or ESWL (shock wave therapy).' },

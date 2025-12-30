@@ -167,7 +167,7 @@ const Hero = () => {
                     {service.title}
                   </span>
                 </div>
-                <SafeIcon icon={FiArrowRight} className="w-4 h-4 sm:w-5 sm:h-5 text-white/80 group-hover:text-emerald-600 transition-all duration-300 group-hover:translate-x-1" />
+                {/* <SafeIcon icon={FiArrowRight} className="w-4 h-4 sm:w-5 sm:h-5 text-white/80 group-hover:text-emerald-600 transition-all duration-300 group-hover:translate-x-1" /> */}
               </div>
             </Link>
           ))}

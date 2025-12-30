@@ -52,7 +52,7 @@ const Laparoscopy = () => {
             { name: 'Arun Kumar', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80', rating: 5, review: "The laparoscopy team is amazing. My gallbladder surgery was done through tiny incisions. I was back to work in just a week!" },
             { name: 'Meera Reddy', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80', rating: 5, review: "Outstanding surgical care! The minimally invasive approach made all the difference. Professional team and excellent facilities." }
         ],
-        contact: { phone: '+91 9876543210', email: 'laparoscopy@jananihospital.com', location: 'Block H, 3rd Floor', hours: 'Mon-Sat: 9 AM - 6 PM | Emergency: 24/7' },
+        contact: { phone: '+91 70908 31208', email: 'Jananihospital2018@gmail.com', location: 'Block H, 3rd Floor', hours: 'Mon-Sat: 9 AM - 6 PM | Emergency: 24/7' },
         faq: [
             { question: 'What are the main advantages of laparoscopic surgery?', answer: 'Laparoscopic surgery involves smaller incisions, which leads to less pain, reduced scarring, shorter hospital stay, faster recovery, and lower risk of infection compared to traditional open surgery.' },
             { question: 'Is laparoscopic surgery safe?', answer: 'Yes, laparoscopic surgery is very safe when performed by experienced surgeons. Our team uses advanced technology and follows strict safety protocols to ensure the highest standards of care.' },

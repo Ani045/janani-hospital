@@ -343,7 +343,7 @@ const About = () => {
                                 viewport={{ once: true }}
                                 className="text-2xl md:text-3xl lg:text-4xl font-black text-gray-900 leading-[1.1]"
                             >
-                                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-blue-600">DNA</span><br />
+                                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-blue-600">Core Values</span><br />
                                 <span className="text-xl md:text-2xl text-gray-400 font-medium">Values that Drive Us</span>
                             </motion.h2>
                         </div>

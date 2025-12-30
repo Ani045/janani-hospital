@@ -32,8 +32,8 @@ const DepartmentDetail = () => {
                 'Geriatric Care'
             ],
             services: [
-                { name: 'Primary Care', description: 'Comprehensive primary healthcare for all age groups.', icon: FiActivity, procedures: ['General Consultation', 'Diagnosis', 'Treatment', 'Referrals'], stats: { patients: '5000+', success: '95%' }, image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' },
-                { name: 'Health Checkups', description: 'Preventive health screening packages for early detection.', icon: FiShield, procedures: ['Master Health Checkup', 'Executive Checkup', 'Senior Citizen Package', 'Women Health Package'], stats: { patients: '2000+', success: '98%' }, image: 'https://images.unsplash.com/photo-1551190822-a9333d879b1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80' }
+                { name: 'Primary Care', description: 'Comprehensive primary healthcare for all age groups.', icon: FiActivity, procedures: ['General Consultation', 'Diagnosis', 'Treatment', 'Referrals'], stats: { patients: '5000+', success: '95%' }, image: '/general_medicine/Primary Care.jpg' },
+                { name: 'Health Checkups', description: 'Preventive health screening packages for early detection.', icon: FiShield, procedures: ['Master Health Checkup', 'Executive Checkup', 'Senior Citizen Package', 'Women Health Package'], stats: { patients: '2000+', success: '98%' }, image: '/general_medicine/Health Checkups.jpg' }
             ],
             doctors: [
                 { name: 'Dr. Ramesh Babu', specialization: 'Senior General Physician', experience: '30 years', image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=300', rating: 4.8, expertise: ['Internal Medicine', 'Emergency Care', 'Chronic Diseases'] }
@@ -46,7 +46,7 @@ const DepartmentDetail = () => {
                 { name: 'Amit Patel', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80', rating: 5, review: "Dr. Ramesh Babu is an excellent physician. He listened to my concerns patiently and provided a very effective treatment plan for my chronic condition." },
                 { name: 'Priya Sharma', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80', rating: 5, review: "The health checkup package was very thorough. The staff were professional and the process was smooth. Highly recommend for preventive care." }
             ],
-            contact: { phone: '+91 9876543214', email: 'medicine@jananihospital.com', location: 'Block D, Ground Floor', hours: '24/7 Emergency | OPD: 8 AM - 8 PM' },
+            contact: { phone: '+91 70908 31208', email: 'Jananihospital2018@gmail.com', location: 'Block D, Ground Floor', hours: '24/7 Emergency | OPD: 8 AM - 8 PM' },
             faq: [
                 { question: 'What conditions are treated in General Medicine?', answer: 'We treat a wide range of conditions including infections, hypertension, diabetes, respiratory illnesses, and other non-surgical health problems.' },
                 { question: 'Do I need an appointment for a consultation?', answer: 'While we accept walk-in patients, we highly recommend booking an appointment to avoid long waiting times.' },

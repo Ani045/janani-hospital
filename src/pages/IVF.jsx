@@ -206,7 +206,7 @@ const IVF = () => {
     ],
     contact: {
       phone: '+91 9876543211',
-      email: 'ivf@jananihospital.com',
+      email: 'Jananihospital2018@gmail.com',
       location: 'Block B, 2nd Floor, Janani Hospital, Hyderabad',
       hours: 'Mon-Sat: 8 AM - 6 PM | Sun: 9 AM - 2 PM',
     },

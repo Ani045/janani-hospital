@@ -51,7 +51,7 @@ const CriticalCare = () => {
             { name: 'Kavya & Suresh', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80', rating: 5, review: "Outstanding critical care during our son's accident recovery. The doctors and nurses provided excellent care and kept us informed throughout. The ICU facilities are world-class." },
             { name: 'Priya Nair', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80', rating: 5, review: "Professional and compassionate care in the cardiac ICU. The advanced monitoring and immediate response saved my husband's life. Highly recommend this hospital for critical care." }
         ],
-        contact: { phone: '+91 9876543220', email: 'criticalcare@jananihospital.com', location: 'Block J, 2nd Floor', hours: '24/7 Emergency Care | ICU Visits: 11 AM-12 PM, 6 PM-7 PM' },
+        contact: { phone: '+91 70908 31208', email: 'Jananihospital2018@gmail.com', location: 'Block J, 2nd Floor', hours: '24/7 Emergency Care | ICU Visits: 11 AM-12 PM, 6 PM-7 PM' },
         faq: [
             { question: 'What is an ICU and when is it needed?', answer: 'An Intensive Care Unit (ICU) provides specialized care for critically ill patients with life-threatening conditions. It\'s needed when patients require constant monitoring, life support equipment, and immediate medical intervention.' },
             { question: 'What are the visiting hours for ICU patients?', answer: 'ICU visiting hours are typically 11 AM-12 PM and 6 PM-7 PM to ensure patient rest and medical procedures. Emergency family visits can be arranged through the nursing station.' },

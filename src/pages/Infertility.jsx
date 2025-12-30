@@ -51,7 +51,7 @@ const Infertility = () => {
             { name: 'Priya & Rahul Verma', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80', rating: 5, review: "The doctors were compassionate and professional. The treatment plan was well-explained and the support throughout was exceptional." },
             { name: 'Sunita Reddy', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80', rating: 5, review: "Excellent fertility center with modern facilities. The counseling support helped us emotionally. Highly recommend to anyone facing fertility issues." }
         ],
-        contact: { phone: '+91 9876543223', email: 'infertility@jananihospital.com', location: 'Block M, 2nd Floor', hours: 'Mon-Sat: 8 AM - 6 PM | Sun: 9 AM - 2 PM' },
+        contact: { phone: '+91 70908 31208', email: 'Jananihospital2018@gmail.com', location: 'Block M, 2nd Floor', hours: 'Mon-Sat: 8 AM - 6 PM | Sun: 9 AM - 2 PM' },
         faq: [
             { question: 'When should we seek help for infertility?', answer: 'It is generally recommended to consult a fertility specialist if you have been unable to conceive after one year of regular, unprotected intercourse (or after six months if the woman is over 35).' },
             { question: 'What are the first steps in infertility treatment?', answer: 'The first step is a comprehensive evaluation of both partners, which may include hormone testing, semen analysis, and imaging tests to identify the cause of infertility. Based on the results, a personalized treatment plan is created.' },

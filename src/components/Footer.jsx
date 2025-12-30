@@ -1,27 +1,31 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import SafeIcon from '../common/SafeIcon';
 import * as FiIcons from 'react-icons/fi';
 
-const {FiMapPin, FiPhone, FiMail, FiClock, FiFacebook, FiTwitter, FiInstagram, FiLinkedin, FiArrowRight} = FiIcons;
+const { FiMapPin, FiPhone, FiMail, FiClock, FiFacebook, FiTwitter, FiInstagram, FiLinkedin, FiArrowRight } = FiIcons;
 
 const Footer = () => {
   const quickLinks = [
-    {name: 'About Us', path: '/about'},
-    {name: 'Our Doctors', path: '/doctors'},
-    {name: 'Book Appointment', path: '/appointment'},
-    {name: 'Patient Portal', path: '/portal'},
-    {name: 'Health Packages', path: '/packages'},
-    {name: 'Career', path: '/career'}
+    { name: 'IVF & Fertility', path: '/department/ivf' },
+    { name: 'Pediatrics', path: '/department/pediatrics' },
+    { name: 'OBG', path: '/department/obg' },
+    { name: 'General Medicine', path: '/department/medicine' },
+    { name: 'Surgery', path: '/department/surgery' },
+    { name: 'Orthopedics', path: '/department/ortho' },
+    { name: 'Urology', path: '/department/urology' }
+
   ];
 
   const services = [
-    {name: 'Cardiology', path: '/department/cardiology'},
-    {name: 'Neurology', path: '/department/neurology'},
-    {name: 'Orthopedics', path: '/department/orthopedics'},
-    {name: 'Pediatrics', path: '/department/pediatrics'},
-    {name: 'Emergency Care', path: '/department/emergency'},
-    {name: 'Oncology', path: '/department/oncology'}
+    { name: 'Laparoscopy', path: '/department/laparoscopy' },
+    { name: 'Neonatology', path: '/department/neonatology' },
+    { name: 'Critical Care', path: '/department/critical-care' },
+    { name: 'Antenatal Care', path: '/department/anc' },
+    { name: 'Pain Clinic', path: '/department/pain-clinic' },
+    { name: 'Infertility', path: '/department/infertility' },
+    { name: 'Endoscopy', path: '/department/endoscopy' }
+
   ];
 
   return (
@@ -32,10 +36,10 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <img 
-                src="https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1759402892809-logo.jpg" 
-                alt="Janani Hospital" 
-                className="h-10 w-auto" 
+              <img
+                src="https://quest-media-storage-bucket.s3.us-east-2.amazonaws.com/1759402892809-logo.jpg"
+                alt="Janani Hospital"
+                className="h-10 w-auto"
               />
               <div>
                 <h3 className="text-lg font-bold">Janani Hospital</h3>
@@ -45,12 +49,12 @@ const Footer = () => {
               Providing exceptional healthcare services with compassion and cutting-edge technology. Your health and wellbeing is our priority.
             </p>
             {/* Social Links */}
-            <div className="flex space-x-3">
+            {/* <div className="flex space-x-3">
               {[
-                {icon: FiFacebook, href: '#', label: 'Facebook'},
-                {icon: FiTwitter, href: '#', label: 'Twitter'},
-                {icon: FiInstagram, href: '#', label: 'Instagram'},
-                {icon: FiLinkedin, href: '#', label: 'LinkedIn'}
+                { icon: FiFacebook, href: '#', label: 'Facebook' },
+                { icon: FiTwitter, href: '#', label: 'Twitter' },
+                { icon: FiInstagram, href: '#', label: 'Instagram' },
+                { icon: FiLinkedin, href: '#', label: 'LinkedIn' }
               ].map((social) => (
                 <a
                   key={social.label}
@@ -61,7 +65,7 @@ const Footer = () => {
                   <SafeIcon icon={social.icon} className="text-sm" />
                 </a>
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}
@@ -84,7 +88,7 @@ const Footer = () => {
 
           {/* Medical Services */}
           <div>
-            <h4 className="text-lg font-bold mb-4">Medical Services</h4>
+            <h4 className="text-lg font-bold mb-4">Departments</h4>
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service.name}>
@@ -104,7 +108,7 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-bold mb-4">Contact Us</h4>
             <div className="space-y-3">
-              <div className="flex items-start space-x-3">
+              {/* <div className="flex items-start space-x-3">
                 <SafeIcon icon={FiMapPin} className="text-teal-400 mt-1 flex-shrink-0 text-sm" />
                 <div>
                   <p className="text-gray-300 text-sm">Janani Hospital</p>
@@ -112,18 +116,18 @@ const Footer = () => {
                   <p className="text-gray-400 text-xs">Jubilee Hills, Hyderabad</p>
                   <p className="text-gray-400 text-xs">Telangana - 500033</p>
                 </div>
-              </div>
+              </div> */}
               <div className="flex items-center space-x-3">
                 <SafeIcon icon={FiPhone} className="text-teal-400 flex-shrink-0 text-sm" />
                 <div>
-                  <p className="text-gray-300 text-sm">+91 40 4012 3456</p>
+                  <p className="text-gray-300 text-sm">+91 70908 31208</p>
                   <p className="text-gray-400 text-xs">24/7 Emergency</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <SafeIcon icon={FiMail} className="text-teal-400 flex-shrink-0 text-sm" />
                 <div>
-                  <p className="text-gray-300 text-sm">info@jananihospital.com</p>
+                  <p className="text-gray-300 text-sm">Jananihospital2018@gmail.com</p>
                   <p className="text-gray-400 text-xs">General Inquiries</p>
                 </div>
               </div>

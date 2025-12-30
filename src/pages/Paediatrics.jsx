@@ -52,7 +52,7 @@ const Paediatrics = () => {
             { name: 'Sunita Kumar', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80', rating: 5, review: "Our experience with the NICU was exceptional. The doctors and nurses provided the best care for our premature baby. We are forever grateful." },
             { name: 'Arjun Reddy', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80', rating: 5, review: "Dr. Anjali Sharma is wonderful with children. The entire staff is caring and professional. Highly recommend this department for any child's healthcare needs." }
         ],
-        contact: { phone: '+91 9876543212', email: 'paediatrics@jananihospital.com', location: 'Block C, 1st Floor', hours: '24/7 Emergency | OPD: 9 AM - 8 PM' },
+        contact: { phone: '+91 70908 31208', email: 'Jananihospital2018@gmail.com', location: 'Block C, 1st Floor', hours: '24/7 Emergency | OPD: 9 AM - 8 PM' },
         faq: [
             { question: 'What age group of children do you treat?', answer: 'Our Paediatrics Department provides care for children from birth through adolescence, typically up to 18 years of age.' },
             { question: 'Do you offer 24/7 emergency services for children?', answer: 'Yes, we have a dedicated Pediatric Emergency bay that is open 24/7 to handle any medical emergencies for children.' },

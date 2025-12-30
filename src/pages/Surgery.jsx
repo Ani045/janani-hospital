@@ -52,7 +52,7 @@ const Surgery = () => {
             { name: 'Sunita Singh', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80', rating: 5, review: "The surgical team was professional and caring. The post-operative care was excellent. I felt safe and well-cared for throughout." },
             { name: 'Arjun Patel', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80', rating: 5, review: "Outstanding surgical care! The minimally invasive approach meant faster healing and less scarring. Highly recommend this department." }
         ],
-        contact: { phone: '+91 9876543215', email: 'surgery@jananihospital.com', location: 'Block E, 3rd Floor', hours: '24/7 Emergency | OPD: 9 AM - 6 PM' },
+        contact: { phone: '+91 70908 31208', email: 'Jananihospital2018@gmail.com', location: 'Block E, 3rd Floor', hours: '24/7 Emergency | OPD: 9 AM - 6 PM' },
         faq: [
             { question: 'What are the benefits of minimally invasive surgery?', answer: 'Minimally invasive surgery involves smaller incisions, resulting in less pain, reduced scarring, a shorter hospital stay, and a faster return to normal activities compared to traditional open surgery.' },
             { question: 'How should I prepare for my surgery?', answer: 'Our team will provide you with detailed pre-operative instructions, which typically include dietary restrictions, medication adjustments, and other guidelines to ensure you are ready for your procedure.' },
