@@ -9,18 +9,18 @@ import ContactSection from '../components/ContactSection';
 import JananiHospitalSections from '../components/JananiHospitalSections';
 
 const Home = () => {
- return (
- <>
- <Hero />
-  <DepartmentsSection />
-  <AboutSection />
-  <JananiHospitalSections />
- {/* <DoctorsSection /> */}
- <TestimonialsSection />
- <FaqSection />
- <ContactSection />
- </>
- );
+    return (
+        <>
+            <Hero />
+            <DepartmentsSection />
+            <AboutSection />
+            <JananiHospitalSections />
+            {/* <DoctorsSection /> */}
+            <TestimonialsSection />
+            <FaqSection />
+            <ContactSection />
+        </>
+    );
 };
 
 export default Home;

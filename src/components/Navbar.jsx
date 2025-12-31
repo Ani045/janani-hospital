@@ -68,7 +68,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-12 sm:h-14 lg:h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
-            <img src="logo.png"
+            <img src="https://res.cloudinary.com/damfndmrm/image/upload/v1767163208/logo_eqtacj.png"
               alt="Janani Hospital"
               className={`h-12 sm:h-16 lg:h-20 w-auto transition-all duration-300 opacity-90 group-hover:opacity-100 ${isScrolled ? '' : 'brightness-0 invert'}`}
             />

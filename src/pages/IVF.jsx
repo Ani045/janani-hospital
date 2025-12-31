@@ -205,9 +205,9 @@ const IVF = () => {
       },
     ],
     contact: {
-      phone: '+91 9876543211',
+      phone: '+91 70908 31208',
       email: 'Jananihospital2018@gmail.com',
-      location: 'Block B, 2nd Floor, Janani Hospital, Hyderabad',
+      // location: 'Block B, 2nd Floor, Janani Hospital, Hyderabad',
       hours: 'Mon-Sat: 8 AM - 6 PM | Sun: 9 AM - 2 PM',
     },
     faq: [
@@ -382,7 +382,7 @@ const IVF = () => {
                   {[
                     { icon: FiPhone, label: 'Department Phone', value: departmentData.contact.phone },
                     { icon: FiMail, label: 'Email Address', value: departmentData.contact.email },
-                    { icon: FiMapPin, label: 'Location', value: departmentData.contact.location },
+                    // { icon: FiMapPin, label: 'Location', value: departmentData.contact.location },
                     { icon: FiClock, label: 'Working Hours', value: departmentData.contact.hours },
                   ].map((item, idx) => (
                     <div

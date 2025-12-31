@@ -52,7 +52,7 @@ const Hysteroscopy = () => {
             { name: 'Anitha Kumar', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80', rating: 5, review: "The office-based procedure was so convenient. No hospital stay needed and I felt comfortable throughout. Professional and caring team." },
             { name: 'Divya Reddy', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80', rating: 5, review: "Outstanding care for my fertility treatment. The hysteroscopic procedure helped me conceive successfully. Forever grateful to the team!" }
         ],
-        contact: { phone: '+91 70908 31208', email: 'Jananihospital2018@gmail.com', location: 'Block D, 2nd Floor', hours: 'Mon-Sat: 9 AM - 6 PM | Consultation: By Appointment' },
+        contact: { phone: '+91 70908 31208', email: 'Jananihospital2018@gmail.com', hours: 'Mon-Sat: 9 AM - 6 PM | Consultation: By Appointment' },
         faq: [
             { question: 'What is hysteroscopy and when is it recommended?', answer: 'Hysteroscopy is a minimally invasive procedure to examine and treat the inside of the uterus. It\'s recommended for abnormal bleeding, polyps, fibroids, fertility issues, and diagnostic purposes.' },
             { question: 'Is hysteroscopy painful?', answer: 'Most hysteroscopic procedures cause minimal discomfort. Office-based diagnostic hysteroscopy typically requires no anesthesia, while operative procedures may use local or light sedation.' },
@@ -171,7 +171,7 @@ const Hysteroscopy = () => {
                                     {[
                                         { icon: FiPhone, label: 'Department Phone', value: departmentData.contact.phone },
                                         { icon: FiMail, label: 'Email Address', value: departmentData.contact.email },
-                                        { icon: FiMapPin, label: 'Location', value: departmentData.contact.location },
+                                        // { icon: FiMapPin, label: 'Location', value: departmentData.contact.location },
                                         { icon: FiClock, label: 'Working Hours', value: departmentData.contact.hours }
                                     ].map((item, idx) => (
                                         <div key={idx} className="flex items-start space-x-3 p-3 bg-gray-50 rounded-xl">

@@ -51,7 +51,7 @@ const OBG = () => {
             { name: 'Radhika Sharma', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80', rating: 5, review: "The delivery experience was amazing. The staff was so supportive and the facilities are world-class. I felt safe and cared for throughout my stay." },
             { name: 'Anita Reddy', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80', rating: 5, review: "From prenatal care to delivery, everything was perfect. The doctors are highly skilled and the nursing staff is compassionate. Highly recommended for expectant mothers." }
         ],
-        contact: { phone: '+91 70908 31208', email: 'Jananihospital2018@gmail.com', location: 'Block C, 3rd Floor', hours: '24/7 Maternity Care | OPD: Mon-Sat 9 AM - 6 PM' },
+        contact: { phone: '+91 70908 31208', email: 'Jananihospital2018@gmail.com', hours: '24/7 Maternity Care | OPD: Mon-Sat 9 AM - 6 PM' },
         faq: [
             { question: 'What facilities do you have for normal delivery?', answer: 'Our maternity ward has modern labor rooms with advanced monitoring equipment, birthing beds, and immediate access to operation theaters if needed. We also offer options like water birth and have 24/7 anesthesia services available.' },
             { question: 'Do you handle high-risk pregnancies?', answer: 'Yes, we specialize in high-risk pregnancy management with maternal-fetal medicine specialists, advanced monitoring equipment, and a Level 3 NICU. We handle conditions like preeclampsia, gestational diabetes, multiple pregnancies, and other complications.' },
@@ -171,7 +171,7 @@ const OBG = () => {
                                     {[
                                         { icon: FiPhone, label: 'Department Phone', value: departmentData.contact.phone },
                                         { icon: FiMail, label: 'Email Address', value: departmentData.contact.email },
-                                        { icon: FiMapPin, label: 'Location', value: departmentData.contact.location },
+                                        // { icon: FiMapPin, label: 'Location', value: departmentData.contact.location },
                                         { icon: FiClock, label: 'Working Hours', value: departmentData.contact.hours }
                                     ].map((item, idx) => (
                                         <div key={idx} className="flex items-start space-x-3 p-3 bg-gray-50 rounded-xl">

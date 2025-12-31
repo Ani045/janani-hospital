@@ -8,31 +8,31 @@ const { FiUsers, FiHeart, FiShield, FiMonitor } = FiIcons;
 const JananiHospitalSections = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
- const commonLine = "Honored for exceptional contributions in healthcare.";
+  const commonLine = "Honored for exceptional contributions in healthcare.";
 
-const awards = [
-  {
-    id: 1,
-    image: "/homepage/awards.jpeg",
-    title: "Excellence in Women's Healthcare ",
-    commonLine,
-    link: "#"
-  },
-  {
-    id: 2,
-    image: "/homepage/awards3.jpeg",
-    title: "Healthcare Excellence Awards",
-    commonLine,
-    link: "#"
-  },
-  {
-    id: 3,
-    image: "/homepage/awards1.jpeg",
-    title: "Outstanding Patient Care Recognition - Medical Board India",
-    commonLine,
-    link: "#"
-  }
-];
+  const awards = [
+    {
+      id: 1,
+      image: "/homepage/awards.jpeg",
+      title: "Excellence in Women's Healthcare ",
+      commonLine,
+      link: "#"
+    },
+    {
+      id: 2,
+      image: "/homepage/awards3.jpeg",
+      title: "Healthcare Excellence Awards",
+      commonLine,
+      link: "#"
+    },
+    {
+      id: 3,
+      image: "/homepage/awards1.jpeg",
+      title: "Outstanding Patient Care Recognition - Medical Board India",
+      commonLine,
+      link: "#"
+    }
+  ];
 
 
   const nextSlide = () => {
@@ -116,8 +116,8 @@ const awards = [
             <div className="lg:col-span-3 flex justify-center">
               <div className="relative">
                 {/* Trophy Illustration */}
-                <img src="public/homepage/award.png" width="200" height="280" viewBox="0 0 200 280" fill="none"/>
-                 
+                <img src="https://res.cloudinary.com/damfndmrm/image/upload/v1767163207/award_dzdzl8.png" width="200" height="280" viewBox="0 0 200 280" fill="none" />
+
               </div>
             </div>
 
@@ -126,15 +126,15 @@ const awards = [
               <div className="relative">
                 {/* Slider Container */}
                 <div className="overflow-hidden">
-                  <div 
+                  <div
                     className="flex transition-transform duration-500 ease-in-out"
                     style={{ transform: `translateX(-${currentSlide * 33.333}%)` }}
                   >
                     {awards.map((award) => (
                       <div key={award.id} className="w-full md:w-1/3 flex-shrink-0 px-2">
                         <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200">
-                          <img 
-                            src={award.image} 
+                          <img
+                            src={award.image}
                             alt={award.title}
                             className="w-full h-48 object-cover"
                           />
@@ -142,7 +142,7 @@ const awards = [
                             <h3 className="text-gray-800 font-medium text-sm mb-3 line-clamp-2 min-h-[40px]">
                               {award.title}
                             </h3>
-                            <a 
+                            <a
                               href={award.link}
                               className="text-teal-600 hover:text-teal-700 text-sm font-medium inline-block"
                             >

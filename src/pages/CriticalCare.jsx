@@ -171,7 +171,7 @@ const CriticalCare = () => {
                                     {[
                                         { icon: FiPhone, label: 'Department Phone', value: departmentData.contact.phone },
                                         { icon: FiMail, label: 'Email Address', value: departmentData.contact.email },
-                                        { icon: FiMapPin, label: 'Location', value: departmentData.contact.location },
+                                        //  { icon: FiMapPin, label: 'Location', value: departmentData.contact.location },
                                         { icon: FiClock, label: 'Working Hours', value: departmentData.contact.hours }
                                     ].map((item, idx) => (
                                         <div key={idx} className="flex items-start space-x-3 p-3 bg-gray-50 rounded-xl">

@@ -7,7 +7,7 @@ const { FiStar, FiHeart, FiUsers, FiAward, FiMessageSquare } = FiIcons;
 
 const TestimonialsSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  
+
   const testimonials = [
     { id: 1, name: 'Ahmed Raza Khan', condition: 'Cardiac Surgery', rating: 5, image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300', testimonial: 'The cardiac surgery team at Janani Hospital saved my life. The care and expertise provided were exceptional. I am forever grateful.', treatment: 'Bypass Surgery' },
     { id: 2, name: 'Sneha Sharma', condition: 'Eye Surgery', rating: 5, image: 'https://images.unsplash.com/photo-1651008376811-b90baee60c1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300', testimonial: 'My cataract surgery was seamless and painless. The doctors explained everything clearly and I can see perfectly now.', treatment: 'Cataract Surgery' },
@@ -24,7 +24,7 @@ const TestimonialsSection = () => {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + Math.ceil(testimonials.length / 2)) % Math.ceil(testimonials.length / 2));
   };
-  
+
   useEffect(() => {
     const timer = setInterval(nextSlide, 5000);
     return () => clearInterval(timer);
@@ -71,7 +71,7 @@ const TestimonialsSection = () => {
             <div className="relative">
               {/* Slider Container */}
               <div className="overflow-hidden rounded-xl">
-                <div 
+                <div
                   className="flex transition-transform duration-500 ease-in-out"
                   style={{ transform: `translateX(-${currentSlide * 100}%)` }}
                 >
@@ -106,8 +106,8 @@ const TestimonialsSection = () => {
           {/* Right Illustration - EMBEDDED CLEAN */}
           <div className="lg:col-span-4 flex justify-center lg:justify-end">
             <div className="w-full max-w-xs lg:max-w-sm h-[280px] lg:h-[320px]">
-              <img 
-                src="group-doctor.png" 
+              <img
+                src="https://res.cloudinary.com/damfndmrm/image/upload/v1767163208/group-doctor_q5un3n.png"
                 alt="Happy patients with doctors"
                 className="w-full h-full object-contain object-center"
               />

@@ -51,7 +51,7 @@ const Ortho = () => {
             { name: 'Sunita Devi', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80', rating: 5, review: "My son's spine surgery was performed flawlessly. The care and attention from all staff members was outstanding. Highly recommend this department." },
             { name: 'Arjun Reddy', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80', rating: 5, review: "After my sports injury, the arthroscopic surgery here got me back to playing cricket. The facilities and expertise are world-class." }
         ],
-        contact: { phone: '+91 70908 31208', email: 'Jananihospital2018@gmail.com', location: 'Block F, 2nd Floor', hours: '24/7 Emergency | OPD: Mon-Sat 9 AM - 6 PM' },
+        contact: { phone: '+91 70908 31208', email: 'Jananihospital2018@gmail.com', hours: '24/7 Emergency | OPD: Mon-Sat 9 AM - 6 PM' },
         faq: [
             { question: 'When should I consider joint replacement surgery?', answer: 'Joint replacement is typically recommended when joint pain and stiffness severely limit your daily activities, and non-surgical treatments like medication, physical therapy, and injections are no longer effective. Our specialists will provide a thorough evaluation to determine if you\'re a candidate.' },
             { question: 'What is recovery like after arthroscopic surgery?', answer: 'Recovery from arthroscopic surgery is much faster than open surgery. Most patients can go home the same day and return to light activities within a few days. Full recovery typically takes a few weeks to months depending on the specific procedure and your compliance with rehabilitation.' },
@@ -171,7 +171,7 @@ const Ortho = () => {
                                     {[
                                         { icon: FiPhone, label: 'Department Phone', value: departmentData.contact.phone },
                                         { icon: FiMail, label: 'Email Address', value: departmentData.contact.email },
-                                        { icon: FiMapPin, label: 'Location', value: departmentData.contact.location },
+                                        // { icon: FiMapPin, label: 'Location', value: departmentData.contact.location },
                                         { icon: FiClock, label: 'Working Hours', value: departmentData.contact.hours }
                                     ].map((item, idx) => (
                                         <div key={idx} className="flex items-start space-x-3 p-3 bg-gray-50 rounded-xl">

@@ -51,7 +51,7 @@ const Neonatology = () => {
             { name: 'Shalini Patel', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80', rating: 5, review: "The Level III NICU here is amazing. The staff is so caring and professional. They kept us informed every step of the way and our baby is now thriving at home." },
             { name: 'Arjun Reddy', image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80', rating: 5, review: "When our twins were born early, this NICU became our second home. The doctors and nurses treated our babies like their own. We're grateful for their expertise and compassion." }
         ],
-        contact: { phone: '+91 70908 31208', email: 'Jananihospital2018@gmail.com', location: 'Block D, 2nd Floor', hours: '24/7 Emergency NICU | Family Visits: 24/7' },
+        contact: { phone: '+91 70908 31208', email: 'Jananihospital2018@gmail.com', hours: '24/7 Emergency NICU | Family Visits: 24/7' },
         faq: [
             { question: 'What is a Level III NICU?', answer: 'A Level III Neonatal Intensive Care Unit (NICU) is equipped to care for very small or very sick newborn babies. We have a full range of specialists, advanced equipment, and can handle the most complex neonatal cases including those requiring surgery or mechanical ventilation.' },
             { question: 'Can parents stay with their baby in the NICU?', answer: 'Yes, we encourage parents to be with their baby as much as possible. We provide 24/7 family access, comfortable seating areas, and family accommodation rooms. Parents are actively involved in their baby\'s care including feeding, diaper changes, and kangaroo care.' },
@@ -170,7 +170,7 @@ const Neonatology = () => {
                                     {[
                                         { icon: FiPhone, label: 'Department Phone', value: departmentData.contact.phone },
                                         { icon: FiMail, label: 'Email Address', value: departmentData.contact.email },
-                                        { icon: FiMapPin, label: 'Location', value: departmentData.contact.location },
+                                        // { icon: FiMapPin, label: 'Location', value: departmentData.contact.location },
                                         { icon: FiClock, label: 'Working Hours', value: departmentData.contact.hours }
                                     ].map((item, idx) => (
                                         <div key={idx} className="flex items-start space-x-3 p-3 bg-gray-50 rounded-xl">

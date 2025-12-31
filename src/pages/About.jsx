@@ -42,7 +42,7 @@ const About = () => {
             year: '2024',
             title: 'Excellence',
             description: 'Celebrating 25 years of healthcare excellence and innovation.',
-            image: '/about/2024.png' // Female Indian Doctor (Professional)
+            image: '/homepage/awards.jpeg' // Female Indian Doctor (Professional)
         }
     ];
 
