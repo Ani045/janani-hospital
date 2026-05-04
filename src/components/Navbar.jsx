@@ -57,9 +57,11 @@ const Navbar = () => {
     setDropdownTimeout(timeout);
   };
 
+  const isHomePage = location.pathname === '/';
+
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-[150] transition-all duration-500 ease-out ${isScrolled
+      className={`fixed top-0 left-0 w-full z-[150] transition-all duration-500 ease-out ${isScrolled || !isHomePage
         ? 'bg-white/95 backdrop-blur-xl shadow-xl py-2 sm:py-3 border-b border-gray-200'
         : 'py-3 sm:py-4 bg-transparent'
         }`}
@@ -70,7 +72,7 @@ const Navbar = () => {
           <Link to="/" className="flex items-center space-x-2 group">
             <img src="https://res.cloudinary.com/damfndmrm/image/upload/v1767163208/logo_eqtacj.png"
               alt="Janani Hospital"
-              className={`h-12 sm:h-16 lg:h-20 w-auto transition-all duration-300 opacity-90 group-hover:opacity-100 ${isScrolled ? '' : 'brightness-0 invert'}`}
+              className={`h-12 sm:h-16 lg:h-20 w-auto transition-all duration-300 opacity-90 group-hover:opacity-100 ${isScrolled || !isHomePage ? '' : 'brightness-0 invert'}`}
             />
             <span className={`text-xl font-bold hidden lg:block transition-all duration-300 ${isScrolled
               ? 'text-gray-900'
@@ -81,27 +83,27 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden xl:flex items-center space-x-8">
-            {/* <Link
+          <div className="hidden xl:flex items-center space-x-4 2xl:space-x-6">
+            <Link
               to="/"
-              className={`relative font-semibold text-sm px-3 py-8 mb-2 transition-all duration-300 group ${location.pathname === '/'
-                  ? (isScrolled ? 'text-emerald-600' : 'text-white drop-shadow-lg')
-                  : (isScrolled ? 'text-gray-700 hover:text-emerald-600' : 'text-white/90 hover:text-white drop-shadow-lg')
-                } ${isScrolled ? 'after:bg-emerald-600' : 'after:bg-white/80'}`}
+              className={`relative font-semibold text-sm px-3 py-2 transition-all duration-300 group whitespace-nowrap ${location.pathname === '/'
+                ? (isScrolled || !isHomePage ? 'text-emerald-600' : 'text-white drop-shadow-lg')
+                : (isScrolled || !isHomePage ? 'text-gray-700 hover:text-emerald-600' : 'text-white/90 hover:text-white drop-shadow-lg')
+                } ${isScrolled || !isHomePage ? 'after:bg-emerald-600' : 'after:bg-white/80'}`}
             >
               Home
               {location.pathname === '/' && (
-                <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 rounded-full transition-all duration-300 group-hover:w-full ${isScrolled ? 'bg-emerald-600' : 'bg-white/80'
+                <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 rounded-full transition-all duration-300 group-hover:w-full ${isScrolled || !isHomePage ? 'bg-emerald-600' : 'bg-white/80'
                   }`}
                 />
               )}
-            </Link> */}
+            </Link>
             <Link
               to="/about"
-              className={`relative font-semibold text-sm px-3 py-2 transition-all duration-300 group ${location.pathname === '/about'
-                ? (isScrolled ? 'text-emerald-600' : 'text-white drop-shadow-lg')
-                : (isScrolled ? 'text-gray-700 hover:text-emerald-600' : 'text-white/90 hover:text-white drop-shadow-lg')
-                } ${isScrolled ? 'after:bg-emerald-600' : 'after:bg-white/80'}`}
+              className={`relative font-semibold text-sm px-3 py-2 transition-all duration-300 group whitespace-nowrap ${location.pathname === '/about'
+                ? (isScrolled || !isHomePage ? 'text-emerald-600' : 'text-white drop-shadow-lg')
+                : (isScrolled || !isHomePage ? 'text-gray-700 hover:text-emerald-600' : 'text-white/90 hover:text-white drop-shadow-lg')
+                } ${isScrolled || !isHomePage ? 'after:bg-emerald-600' : 'after:bg-white/80'}`}
             >
               About
               {location.pathname === '/about' && (
@@ -118,8 +120,8 @@ const Navbar = () => {
               onMouseLeave={handleMouseLeave}
             >
               <button className={`flex items-center space-x-2 font-semibold text-sm px-3 py-2 transition-all duration-300 group relative ${activeDropdown === 'departments'
-                ? (isScrolled ? 'text-emerald-600 font-bold' : 'text-white drop-shadow-lg font-bold')
-                : (isScrolled ? 'text-gray-700 hover:text-emerald-600' : 'text-white/90 hover:text-white drop-shadow-lg')
+                ? (isScrolled || !isHomePage ? 'text-emerald-600 font-bold' : 'text-white drop-shadow-lg font-bold')
+                : (isScrolled || !isHomePage ? 'text-gray-700 hover:text-emerald-600' : 'text-white/90 hover:text-white drop-shadow-lg')
                 }`}>
                 <span>Departments</span>
                 <SafeIcon
@@ -179,10 +181,60 @@ const Navbar = () => {
             </div>
 
             <Link
+              to="/doctors"
+              className={`relative font-semibold text-sm px-3 py-2 transition-all duration-300 group whitespace-nowrap ${location.pathname === '/doctors'
+                ? (isScrolled || !isHomePage ? 'text-emerald-600' : 'text-white drop-shadow-lg')
+                : (isScrolled || !isHomePage ? 'text-gray-700 hover:text-emerald-600' : 'text-white/90 hover:text-white drop-shadow-lg')
+                }`}
+            >
+              Doctors
+            </Link>
+
+            <Link
+              to="/health-packages"
+              className={`relative font-semibold text-sm px-3 py-2 transition-all duration-300 group whitespace-nowrap ${location.pathname === '/health-packages'
+                ? (isScrolled || !isHomePage ? 'text-emerald-600' : 'text-white drop-shadow-lg')
+                : (isScrolled || !isHomePage ? 'text-gray-700 hover:text-emerald-600' : 'text-white/90 hover:text-white drop-shadow-lg')
+                }`}
+            >
+              Packages
+            </Link>
+
+            <Link
+              to="/patient-info"
+              className={`relative font-semibold text-sm px-3 py-2 transition-all duration-300 group whitespace-nowrap ${location.pathname === '/patient-info'
+                ? (isScrolled || !isHomePage ? 'text-emerald-600' : 'text-white drop-shadow-lg')
+                : (isScrolled || !isHomePage ? 'text-gray-700 hover:text-emerald-600' : 'text-white/90 hover:text-white drop-shadow-lg')
+                }`}
+            >
+              Patient Info
+            </Link>
+
+            <Link
+              to="/gallery"
+              className={`relative font-semibold text-sm px-3 py-2 transition-all duration-300 group whitespace-nowrap ${location.pathname === '/gallery'
+                ? (isScrolled || !isHomePage ? 'text-emerald-600' : 'text-white drop-shadow-lg')
+                : (isScrolled || !isHomePage ? 'text-gray-700 hover:text-emerald-600' : 'text-white/90 hover:text-white drop-shadow-lg')
+                }`}
+            >
+              Gallery
+            </Link>
+
+            <Link
+              to="/blogs"
+              className={`relative font-semibold text-sm px-3 py-2 transition-all duration-300 group whitespace-nowrap ${location.pathname === '/blogs'
+                ? (isScrolled || !isHomePage ? 'text-emerald-600' : 'text-white drop-shadow-lg')
+                : (isScrolled || !isHomePage ? 'text-gray-700 hover:text-emerald-600' : 'text-white/90 hover:text-white drop-shadow-lg')
+                }`}
+            >
+              Blogs
+            </Link>
+
+            <Link
               to="/contact"
-              className={`relative font-semibold text-sm px-3 py-2 transition-all duration-300 group ${location.pathname === '/contact'
-                ? (isScrolled ? 'text-emerald-600' : 'text-white drop-shadow-lg')
-                : (isScrolled ? 'text-gray-700 hover:text-emerald-600' : 'text-white/90 hover:text-white drop-shadow-lg')
+              className={`relative font-semibold text-sm px-3 py-2 transition-all duration-300 group whitespace-nowrap ${location.pathname === '/contact'
+                ? (isScrolled || !isHomePage ? 'text-emerald-600' : 'text-white drop-shadow-lg')
+                : (isScrolled || !isHomePage ? 'text-gray-700 hover:text-emerald-600' : 'text-white/90 hover:text-white drop-shadow-lg')
                 }`}
             >
               Contact
@@ -193,7 +245,7 @@ const Navbar = () => {
           <div className="hidden xl:block">
             <Link
               to="/appointment"
-              className={`group px-6 py-2.5 rounded-xl font-semibold text-sm flex items-center space-x-2 transition-all duration-300 shadow-lg ${isScrolled
+              className={`group px-6 py-2.5 rounded-xl font-semibold text-sm flex items-center space-x-2 transition-all duration-300 shadow-lg whitespace-nowrap ${isScrolled
                 ? 'bg-emerald-600 text-white hover:bg-emerald-700 hover:shadow-xl hover:-translate-y-0.5'
                 : 'bg-white/90 text-emerald-600 backdrop-blur hover:bg-white hover:shadow-xl hover:-translate-y-0.5 drop-shadow-lg'
                 }`}
@@ -210,7 +262,7 @@ const Navbar = () => {
           >
             <SafeIcon
               icon={isMobileMenuOpen ? FiX : FiMenu}
-              className={`text-xl transition-all duration-300 ${isScrolled ? 'text-gray-900' : 'text-white drop-shadow-lg'}`}
+              className={`text-xl transition-all duration-300 ${isScrolled || !isHomePage ? 'text-gray-900' : 'text-white drop-shadow-lg'}`}
             />
           </button>
         </div>

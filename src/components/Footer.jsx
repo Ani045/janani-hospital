@@ -18,14 +18,13 @@ const Footer = () => {
   ];
 
   const services = [
-    { name: 'Laparoscopy', path: '/department/laparoscopy' },
-    { name: 'Neonatology', path: '/department/neonatology' },
-    { name: 'Critical Care', path: '/department/critical-care' },
-    { name: 'Antenatal Care', path: '/department/anc' },
-    { name: 'Pain Clinic', path: '/department/pain-clinic' },
-    { name: 'Infertility', path: '/department/infertility' },
-    { name: 'Endoscopy', path: '/department/endoscopy' }
-
+    { name: 'Gallery', path: '/gallery' },
+    { name: 'Blogs', path: '/blogs' },
+    { name: 'Careers', path: '/careers' },
+    { name: 'Our Doctors', path: '/doctors' },
+    { name: 'Patient Information', path: '/patient-info' },
+    { name: 'Health Packages', path: '/health-packages' },
+    { name: 'Book Appointment', path: '/appointment' }
   ];
 
   return (

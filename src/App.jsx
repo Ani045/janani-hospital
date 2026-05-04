@@ -32,6 +32,13 @@ import Gallery from './pages/Gallery';
 import MembershipHealthCart from './pages/MembershipHealthCart';
 import BookLabTest from './pages/BookLabTest';
 import ThankYou from './pages/ThankYou';
+import Blogs from './pages/Blogs';
+import Careers from './pages/Careers';
+import OurDoctors from './pages/OurDoctors';
+import DoctorProfile from './pages/DoctorProfile';
+import PatientInformation from './pages/PatientInformation';
+import BookAppointment from './pages/BookAppointment';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 function App() {
   return (
@@ -43,7 +50,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/appointment" element={<Contact />} />
+            <Route path="/appointment" element={<BookAppointment />} />
+            <Route path="/book-appointment" element={<BookAppointment />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
 
             {/* Specific Department Routes */}
             <Route path="/department/ivf" element={<IVF />} />
@@ -69,6 +78,12 @@ function App() {
             <Route path="/health-packages" element={<MembershipHealthCart />} />
             <Route path="/book-lab-test" element={<BookLabTest />} />
             <Route path="/thank-you" element={<ThankYou />} />
+            <Route path="/blogs" element={<Blogs />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/doctors" element={<OurDoctors />} />
+            <Route path="/doctor/:id" element={<DoctorProfile />} />
+            <Route path="/patient-info" element={<PatientInformation />} />
+            <Route path="/appointment-confirmed" element={<ThankYou />} />
           </Routes>
         </main>
         <Footer />
