@@ -164,7 +164,7 @@ const About = () => {
                         >
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">About Janani <span className="text-teal-400">Hospital</span></h1>
                             <p className="text-lg text-white/80 mb-8 leading-relaxed">
-                                Pioneering excellence in healthcare for over two decades with compassionate care and cutting-edge technology.
+                                Pioneering excellence in healthcare for over 2 decades with compassionate care and cutting-edge technology.
                             </p>
                             <Link
                                 to="/appointment"
